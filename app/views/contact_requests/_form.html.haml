@@ -1,0 +1,17 @@
+%fieldset
+  %ul
+    %li.form-field.required
+      = form.label :name
+      = form.text_field :name, :maxlength=> 100
+  
+    %li.form-field.required
+      = form.label :email
+      = form.text_field :email, :maxlength=> 100
+          
+    %li.form-field.required
+      = form.label :subject
+      = form.text_field :subject , :maxlength => 100   
+      
+    %li.form-field.required
+      = form.label :message
+      = form.text_area :message   

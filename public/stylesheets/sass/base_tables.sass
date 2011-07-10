@@ -1,0 +1,189 @@
+$blue: #308ABB
+$blue_med: #C2E0EF
+$blue_odd: #D7E8F2
+$blue_even: #ECF4F7
+$green: #719A4E
+$green_light: #E8F7E3
+$red: #cc0000
+$red_light: $red + #333
+$red_pale: $red_light + #333
+$yellow: #ffcc00
+$lemon_yellow: #ffffd0
+$mustard_yellow: #E5B430
+$dark_taupe: #B4B5AA
+$taupe: $dark_taupe + #111111
+
+/*TABLES*/     
+      
+table.outline
+  :border 4px solid #B2936C
+  td, tr
+    :border 0
+
+table.nolink
+  a
+    :text-decoration none
+    :color black
+              
+table.data
+  :min-width 550px
+  :border-collapse collapse
+  :margin 10px 0
+  :clear both
+  
+  &.listing
+    :background #fff
+    :margin-bottom 25px
+  
+  th
+    :padding 8px
+    :vertical-align top
+    :text-align left
+    :font-weight normal 
+    :background $taupe
+    :color #333
+    :border-bottom 1px solid #fff
+
+    &.money
+      :text-align right
+      :white-space nowrap
+      
+    &.divider
+      :border-right #fff 1px dashed    
+      
+    &.head_actions a
+      :float left
+      :display block
+      :margin 0 2px 2px 0
+      :color #fff
+      :font-size 9px
+      :letter-spacing 0.1em
+      :text-transform uppercase
+      :text-decoration none
+
+      &:hover
+        :color #333  
+        
+
+
+      
+  tr    
+    &.internal td
+      :background-color #FFFB83
+
+    &.overdue td
+      :background-color #AF1515
+      :color #fff
+
+    &.disabled td
+      :background-color #EFEFEF
+      :color #666
+
+    &.totals td
+      :background-color #ccc
+      :text-align right
+      :font-weight normal
+
+    &.primary td
+      :background-color $red + #dedede
+
+  tbody
+    tr
+      &.odd td
+        :background-color $blue_odd
+        &.product_view
+          :background-color $blue_med
+          :border-bottom $blue_med 1px solid
+
+      &.over td
+        :background-color $blue_even
+        &.product_view
+          :background-color $blue_med
+          :border-bottom $blue_med 1px solid
+
+      &:hover
+        :background-color $lemon_yellow
+
+      & td
+        :background-color #F0F5F9
+
+      &:hover td
+        :background-color $lemon_yellow
+        
+      &.product_header td
+        :padding 2px 10px
+        :color white
+        :background-color $blue
+                
+  td
+    :padding 5px 10px
+    :border-bottom #fff 1px solid 
+    
+    &.subtitle
+      :font-weight normal
+      :text-decoration underline
+
+    &.money
+      :text-align right
+      :white-space nowrap
+      
+    &.number
+      :font-size 15px
+      :color $blue
+      :width 20px
+      :border-right #fff 1px dashed
+      
+    &.product_view
+      :background-color $blue_med
+      :border-bottom $blue_med 1px solid
+
+    &.divider
+      :border-right #fff 1px dashed
+      
+    div.company_product_external_comment p
+      :margin 0
+      :color $blue
+      
+  input.error
+    :border 3px solid #FF0000
+    :padding 3px
+    
+  tfoot 
+    td  
+      :padding 8px
+      :vertical-align top
+      :text-align left
+      :font-weight normal 
+      :font-size 13px
+      :background $taupe
+      :color #333
+      :border 0
+
+  tfoot#totals
+    td, th
+      :font-weight normal
+      :padding 10px
+      :border-top 2px solid #fff
+      :color #333
+      :background $blue_med
+      
+  em 
+    :background $lemon_yellow
+  
+  em.primary
+    :display block
+    :padding 2px 0 2px 20px
+    :background url(../images/icons/tick.png) no-repeat 0 30%
+
+  .matches
+    :padding-left 45px
+    :font-size 10px
+    :color #404040
+
+
+  
+  
+// no idea what this is for
+table.tall_rows td
+  :vertical-align top
+/*END TABLES*/

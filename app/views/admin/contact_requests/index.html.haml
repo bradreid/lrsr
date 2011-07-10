@@ -1,0 +1,34 @@
+%h2
+  Received Contact Requests
+
+%br
+%table.data.nolink
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Email
+      %th
+        Subject
+      %th
+        Received
+      %th
+        Actions
+  %tbody.request
+    -@contact_requests.each do |request|
+      %tr{:style => "#{request.received? ? '' : 'font-weight:bold'}"}
+        %td
+          =link_to request.name, admin_contact_request_path(request)
+        %td
+          =link_to request.email, admin_contact_request_path(request)
+        %td
+          =link_to request.subject, admin_contact_request_path(request)
+        %td
+          =link_to request.created_at.strftime("%A, %B %d, %Y at %l:%M%p"), admin_contact_request_path(request)
+        %td
+          =action_images [:admin, request], :exclude => [:index, :edit]
+  %tfoot
+    %tr
+      %td{:colspan => 5}
+        = paginate @contact_requests

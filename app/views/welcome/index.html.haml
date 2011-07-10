@@ -1,0 +1,83 @@
+- content_for :javascript_include do
+  :javascript
+    $(function($){
+      $('#weather').weatherfeed(['CAXX1687']);
+    });
+
+%table{:border => 0, :cellpadding => 0, :cellspacing => 0, :align => 'center', :width => '1024px'}
+  %tr
+    %td{:width => '680px', :valign => 'top'}
+      .center.title.bold
+        =@article.try(:title)
+      %br
+      =simple_format(@article.try(:body))
+    %td{:width => '10px'}
+    %td{:width => '268px', :valign => 'top'}
+      %table{:border => 0, :cellspacing => 10, :cellpadding => 0, :width => "334px", :bgcolor => '#DCDCDC'}
+        %tr
+          %td
+            .bold
+              Lac du Bonnet, MB
+              %br
+            .time
+              =@weather.try(:created_at).strftime("%A, %B %d at %l:%M%p")   
+          %td{:align => 'left'}
+            .bold
+              - if @weather && @weather.forcast
+                =@weather.forcast.condition['temp']
+                &deg;C
+          -if @weather && @weather.forcast
+            %tr
+              %td
+                =@weather.sky_conditions
+                %br
+                High:      
+                =@weather.forcast.forecasts.first['high']
+                &deg;C
+                %br
+                Low:
+                =@weather.forcast.forecasts.first['low']
+                &deg;C
+                %br
+                Humidity:
+                =@weather.forcast.atmosphere['humidity']
+                ='%'        
+                %br
+                Sunrise:
+                =@weather.forcast.astronomy.attributes['sunrise'].value
+                %br
+                Sunset:
+                =@weather.forcast.astronomy.attributes['sunset'].value
+              %td{:align => 'left'}
+                =image_tag(@weather.sky_conditions_link)
+          -else
+            %tr
+              %td
+                Weather update not available
+      %br
+      %table.outline{:border => 1, :cellspacing => 0, :cellpadding => 10, :width => 334}
+        %tr
+          %td{:align => 'center'}  
+            Trail Status
+            =trail_status @trail_condition
+            %br
+            %br
+            Newsletter
+            =link_to @newsletter.name, @newsletter.newsletter.url                     
+      %table{:border => 0, :cellspacing => 0, :cellpadding => 10, :width => 334}
+        %tr
+          %td                    
+            %h3 Events
+            -if @events.any?
+              %ul
+                -@events.each do |event|
+                  %li
+                    =link_to "#{event.name} on #{event.display_time}", event_path(event)
+            -else
+              "No Scheduled Events"
+
+  %tr
+    %td{:colspan => 2}
+
+%br
+

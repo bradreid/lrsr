@@ -1,0 +1,72 @@
+.center
+  .title
+    Lee River Snow Riders Membership Renewal
+  .time
+    =Time.now
+%br
+%br
+%table{:border => 0, :cellspacing => 0, :cellpadding => 0, :align => 'center', :width => '600px'}
+  %tr
+    %td  
+      %table{:cellspacing => 10}
+        %tr
+          %td Name:
+          %td.underline{:width => '200px'}
+        %tr
+          %td Address:  
+          %td.underline{:width => '200px'}
+        %tr
+          %td Home Phone:
+          %td.underline{:width => '200px'}
+        %tr
+          %td Cottage Phone:
+          %td.underline{:width => '200px'}
+        %tr
+          %td Email:
+          %td.underline{:width => '400px'}
+      %br
+      %br
+      Would you like to help in the LRSR club?
+      =check_box_tag 'yes'    
+      Yes
+      &nbsp;&nbsp;&nbsp;
+      =check_box_tag 'no'      
+      No
+      %br
+      %br
+      What specific committee?
+      %br
+      %br
+      %table{:cellspacing => 10, :width => '100%'}
+        %tr
+          %td
+            =check_box_tag 'yes'
+            Trail Maintenance
+          %td
+            =check_box_tag 'yes'
+            Public Relations
+          %td
+            =check_box_tag 'yes'    
+            Entertainment
+        %tr
+          %td
+            =check_box_tag 'yes'    
+            Building Maintenance
+          %td
+            =check_box_tag 'yes'    
+            Advertising
+          %td
+            =check_box_tag 'yes'    
+            Safety
+        %tr
+          %td
+            =check_box_tag 'yes'    
+            Gooming
+          %td
+            =check_box_tag 'yes'    
+            Fundraising
+          %td
+            =check_box_tag 'yes'    
+            Membership   
+      %br      
+      Please print and mail your $20.00 cheque and membership form to Lee River Snow Riders, Box 1303, Lac Du Bonnet, MB. R0E 1AO.

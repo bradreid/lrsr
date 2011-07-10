@@ -1,0 +1,16 @@
+#header
+  %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :width => '100%', :align => 'center'}
+    %tr
+      %td{:align => 'center'}
+        #header_image
+          =link_to image_tag('header-1680.png', :width => "100%"), admin_index_path
+  %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :width => '1024', :align => 'center'}           
+    %tr
+      %td{:style => 'padding: 10px'}
+        .site-title
+          =link_to 'LRSR Admin', admin_index_path
+      %td{:style => 'padding: 10px'}
+        .nav_links
+          -links = [link_to('Home', root_path), link_to('Memberships', memberships_path), link_to('Map', 'maps/lrsr-map.pdf'),  link_to('Sponsors', sponsors_path), link_to('Contact Us', new_contact_request_path)]
+          -links << link_to("Logout #{current_user.email}", destroy_user_session_path) if current_user
+          = links.join(' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;').html_safe

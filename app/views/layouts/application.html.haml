@@ -1,0 +1,90 @@
+!!!
+%html
+  %head
+    %meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" /> 
+    %title
+      Lee River Snow Riders
+
+    = stylesheet_link_tag :all
+    <!--[if gte IE 6]><link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen"><![endif]-->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" /> 
+    = yield(:stylesheet_include)
+    = stylesheet_link_tag :all 
+    = javascript_include_tag :all 
+    = csrf_meta_tag 
+    = yield(:javascript_include)
+    
+    
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24436049-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })(); 
+  %body
+    =nav_bar(controller)
+    #content
+      %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :width => 1024, :align => 'center'}          
+        %tr
+          %td{:valign => 'top'}
+            %br
+            =flashes
+            =yield
+    %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :width => '100%', :align => 'center'}
+      %tr
+        %td
+          %br
+          %br
+          .adsense.center
+            :javascript 
+              google_ad_client = "ca-pub-8409006645899010";
+              /* lrsr footer */              
+              google_ad_slot = "3520637051";
+              google_ad_width = 728;
+              google_ad_height = 90;
+            %script{:src=>'http://pagead2.googlesyndication.com/pagead/show_ads.js'}        
+    #footer
+      %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :width => '100%', :height => '250', :align => 'center'} 
+        %tr
+          %td{:align => 'center'}
+            .white
+              %table
+                %tr
+                  %td{:align => 'left'}
+                    %ul
+                      %li
+                        =link_to 'Memberships', memberships_path          
+                      %li
+                        =link_to('Map', 'maps/lrsr-map.pdf')                                      
+                      %li
+                        =link_to 'Newsletters', newsletters_path
+                  %td{:align => 'left'}
+                    %ul
+                      %li
+                        =link_to 'CCSO', 'http://www.ccso-ccom.ca/'
+                      %li
+                        =link_to 'Snoman', 'http://www.snoman.mb.ca/'
+                      %li
+                        =link_to 'Trail Conditions', trail_condition_path(1)               
+                  %td{:align => 'left'}
+                    %ul
+                      %li
+                        =link_to 'Executive/Directors', executives_path
+                      %li
+                        =link_to 'Contact Us', new_contact_request_path
+                      %li
+                        =link_to 'Sponsors', sponsors_path                
+            %br
+            .center
+              = "LRSR Sponsored By #{link_to @sponsor.name, (@sponsor.url.blank? ? sponsors_path : @sponsor.url), :class => 'orange'}".html_safe if @sponsor
+              %br
+              %br
+            &copy Lee River Snow Riders
+            =Time.now.year
+            ="-"
+            ="Developed by #{link_to 'Beyond The Cube', 'http://www.beyondthecube.ca', :class => 'orange'}".html_safe

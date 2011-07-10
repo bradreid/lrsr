@@ -1,0 +1,14 @@
+%fieldset
+  %ul
+    %li.form-field.required
+      = form.label :name
+      = form.text_field :name, :maxlength=> 100
+  
+    %li.form-field
+      = form.label :url
+      = form.text_field :url, :maxlength=> 100
+      
+    %li.form-field
+      = form.label :phone_number
+      = form.text_field :phone_number, :maxlength=> 20
+                     

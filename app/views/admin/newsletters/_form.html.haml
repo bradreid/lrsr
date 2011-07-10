@@ -1,0 +1,9 @@
+%fieldset
+  %ul
+    %li.form-field.required
+      = form.label :name
+      = form.text_field :name, :maxlength=> 50
+  
+    %li.form-field
+      = form.label :file
+      = form.file_field :newsletter

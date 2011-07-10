@@ -1,0 +1,11 @@
+%div.form
+  %h2 Create A New Club News Article
+  - form_for [:admin, @article], :builder => LrsrFormBuilder do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %br
+    = submit_tag "Create", :class => "btn green left_float"
+    
+    = link_to "Cancel", admin_articles_path, :class => "btn red left_float"
+%br
+%br

@@ -1,0 +1,31 @@
+%h2
+  Events
+
+= link_to 'Create A New Event', new_admin_event_path, :class => 'btn blue left_float'
+%br
+%br
+.clear_both
+=render :partial => 'search'  
+%br
+%table.data
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Start
+      %th
+        Actions
+  %tbody
+    -@events.each do |event|
+      %tr
+        %td
+          =event.name
+        %td
+          =event.display_time
+        %td
+          =action_images [:admin, event], :exclude => [:index]
+  %tfoot
+    %tr
+      %td{:colspan => 3}
+        = paginate @events

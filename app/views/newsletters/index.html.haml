@@ -1,0 +1,5 @@
+%h2 Newsletters
+%ul
+  -@newsletters.each do |newsletter|
+    %li
+      =link_to newsletter.name, newsletter.newsletter.url

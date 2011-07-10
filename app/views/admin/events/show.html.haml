@@ -1,0 +1,6 @@
+%h2
+  ="#{@event.name}: #{@event.start.strftime("%A, %B %d, %Y at %l:%M%p")}"
+%h3 Location
+=@event.location
+%h3 Details
+=simple_format @event.details

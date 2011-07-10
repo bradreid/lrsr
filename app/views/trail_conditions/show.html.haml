@@ -1,0 +1,12 @@
+%h2
+  Current Trail Conditions
+  
+%h3
+  Status
+=@trail_condition.status.humanize
+
+%h3
+  Details
+=simple_format @trail_condition.details
+
+="Status and details last updated on #{@trail_condition.updated_at}"

@@ -1,0 +1,16 @@
+development:
+  bucket: lrsr-development
+  access_key_id: AKIAJCOUZLD62QTX3ICQ
+  secret_access_key: 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
+  
+
+test:
+  bucket: lrsr-development
+  access_key_id: AKIAJCOUZLD62QTX3ICQ
+  secret_access_key: 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
+  
+
+production:
+  bucket: lrsr
+  access_key_id: AKIAJCOUZLD62QTX3ICQ
+  secret_access_key: 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

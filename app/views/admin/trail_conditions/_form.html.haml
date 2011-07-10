@@ -1,0 +1,9 @@
+%fieldset
+  %ul
+    %li.form-field.required
+      = form.label :status
+      = form.select :status, TrailCondition::STATUSES.map{|x| [x.humanize, x]}  
+      
+    %li.form-field.required
+      = form.label :details
+      = form.text_area :details   

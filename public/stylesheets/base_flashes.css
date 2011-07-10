@@ -1,0 +1,18 @@
+#flashes {
+  font-size: 16px;
+  text-align: center;
+  margin: 10 10 6px 10;
+  padding: 10;
+  font-weight: normal; }
+  #flashes .flash_notice {
+    color: green;
+    border: green 3px solid;
+    background: #77f777; }
+  #flashes .flash_warn {
+    color: #333333;
+    border: gold 3px solid;
+    background: yellow; }
+  #flashes .flash_error {
+    color: red;
+    border: red 3px solid;
+    background: #ffdddd; }
