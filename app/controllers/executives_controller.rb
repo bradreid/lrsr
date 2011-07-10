@@ -1,0 +1,3 @@
+class ExecutivesController < ApplicationController 
+
+end

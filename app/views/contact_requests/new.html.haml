@@ -1,0 +1,11 @@
+%div.form
+  %h2 Contact Lee River Snow Riders
+  - form_for [@contact_request], :builder => LrsrFormBuilder do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %br
+    = submit_tag "Submit", :class => "btn green left_float"
+    
+    = link_to "Cancel", admin_events_path, :class => "btn red left_float"
+%br
+%br

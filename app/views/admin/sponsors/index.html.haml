@@ -1,0 +1,27 @@
+%h2
+  Sponsors
+
+= link_to 'Create A Sponsor', new_admin_sponsor_path, :class => 'btn blue left_float'
+%br
+%br
+%table.data
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Phone Number
+      %th
+        Actions
+  %tbody
+    -@sponsors.each do |sponsor|
+      %tr
+        %td
+          - if sponsor.url.blank?
+            =sponsor.name
+          -else 
+            =link_to(sponsor.name, sponsor.url) unless sponsor.url.blank?
+        %td
+          =sponsor.phone_number
+        %td
+          =action_images [:admin, sponsor], :exclude => [:show,:index]

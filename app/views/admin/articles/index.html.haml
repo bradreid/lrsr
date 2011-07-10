@@ -1,0 +1,32 @@
+%h2
+  Club News Articles
+
+= link_to 'Create A New Club News Article', new_admin_article_path, :class => 'btn blue left_float'
+%br
+%br
+%table.data
+  %thead
+    %tr
+      %th
+        Title
+      %th
+        Created By
+      %th
+        Created On
+      %th
+        Actions
+  %tbody
+    -@articles.each do |article|
+      %tr
+        %td
+          =article.title
+        %td
+          =article.created_by.email
+        %td
+          =article.created_at.to_formatted_s(:short_with_year)
+        %td
+          =action_images [:admin, article], :exclude => [:index]
+  %tfoot
+    %tr
+      %td{:colspan => 4}
+        = paginate @articles

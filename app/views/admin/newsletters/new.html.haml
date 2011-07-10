@@ -1,0 +1,11 @@
+%div.form
+  %h2 Upload A New Newsletter
+  - form_for [:admin, @newsletter], :html => { :multipart => true },:builder => LrsrFormBuilder do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %br
+    = submit_tag "Upload", :class => "btn green left_float"
+    
+    = link_to "Cancel", admin_newsletters_path, :class => "btn red left_float"
+%br
+%br

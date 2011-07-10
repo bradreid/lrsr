@@ -1,0 +1,15 @@
+#flashes
+  - if !flash[:notice].blank?
+    %div.feedback_container.flash_notice
+      %strong Notice:
+      = flash[:notice]
+
+  - if !flash[:warn].blank?
+    %div.feedback_container.flash_warn
+      %strong Warning:
+      = flash[:warn]
+
+  - if !flash[:error].blank?
+    %div.feedback_container.flash_error
+      %strong Error:
+      = flash[:error]

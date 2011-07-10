@@ -1,0 +1,21 @@
+%h2 Sponsors
+
+Thankyou to the following Vendors who supported us through advertising in our warm up shelters, kiosks or on our trail maps.
+%br
+
+%table.data
+  %tr
+    %th
+      Name
+    %th
+      Phone
+  -@sponsors.each do |sponsor|
+    %tr
+      %td
+        - if !sponsor.url.blank?
+          =link_to sponsor.name, sponsor.url
+        - else
+          =sponsor.name
+      %td
+        =sponsor.phone_number
+        

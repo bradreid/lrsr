@@ -1,0 +1,6 @@
+%h2
+  ="Contact Request From #{@contact_request.name}(#{@contact_request.email}) on #{@contact_request.created_at.strftime("%A, %B %d, %Y at %l:%M%p")}"
+%h3="Subject: #{@contact_request.subject}"
+%br
+=@contact_request.message
+

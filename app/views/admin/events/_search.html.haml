@@ -1,0 +1,5 @@
+%br
+-form_for [:admin, Event.new], :builder => LrsrFormBuilder, :html => {:method => :get} do |f|
+  =label_tag 'upcomming_events_only'
+  =check_box_tag 'upcomming_events', '1', params['upcomming_events']
+  =f.submit 'filter'

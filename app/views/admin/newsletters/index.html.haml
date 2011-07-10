@@ -1,0 +1,22 @@
+%h2 Newsletters
+= link_to 'Upload A New Newsletter', new_admin_newsletter_path, :class => 'btn blue left_float'
+%br
+%br
+
+%table.data
+  %tr
+    %th
+      Name
+    %th 
+      File
+    %th
+      Actions
+  -@newsletters.each do |newsletter|
+    %tr
+      %td
+        =link_to newsletter.name, newsletter.newsletter.url
+      %td
+        =link_to newsletter.newsletter_file_name, newsletter.newsletter.url
+      %td
+        =action_images([:admin, newsletter], :exclude => [:show,:index])
+  

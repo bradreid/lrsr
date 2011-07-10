@@ -1,0 +1,127 @@
+$blue: #308ABB
+$blue_med: #C2E0EF
+$blue_odd: #D7E8F2
+$blue_even: #ECF4F7
+$green: #719A4E
+$green_light: #E8F7E3
+$red: #cc0000
+$red_light: $red + #333
+$red_pale: $red_light + #333
+$yellow: #ffcc00
+$lemon_yellow: #ffffd0
+$mustard_yellow: #E5B430
+$dark_taupe: #B4B5AA
+$taupe: $dark_taupe + #111111
+
+// Form Stylings
+
+.form
+  .form_warnings
+    :padding    20px 15px 20px 15px
+    :margin 15px 0
+    :max-width  95%
+    :color #333
+    :border $yellow 3px solid
+    :background $lemon_yellow
+    
+    strong
+      :font-size 1.2em
+
+    h3
+      :color $red
+      :margin 0
+      :padding 0
+      :letter-spacing 0
+      :text-transform none
+      :padding-left 30px
+      :background url(/images/plus.png) 0% 50% no-repeat
+      :cursor pointer
+      
+    h3:hover
+      :color $red + #333
+      
+  .form_errors
+    :padding    20px 15px 20px 15px
+    :margin 15px 0
+    :max-width  95%
+    :color $red
+    :border $red 3px solid
+    :background $red + #ddd
+    :border-radius 8px
+    -moz-border-radius: 8px
+    -webkit-border-radius: 8px
+    
+    strong
+      :font-size 1.2em
+
+    h3
+      :color $red
+      :margin 0
+      :padding 0
+      :letter-spacing 0
+      :text-transform none
+      :padding-left 30px
+      :background url(/images/plus.png) 0% 50% no-repeat
+      :cursor pointer
+      
+    h3:hover
+      :color $red + #333
+      
+  .contact_method
+  
+    label
+      :width auto
+      :border-border 0px
+      :margin 0px
+      
+  fieldset
+    label
+      :display block
+      :width 200px
+      :float left
+      :margin-right 5px
+      :padding 3px 5px
+      :border-left 5px solid #AAA
+      :border-bottom 1px dotted #999
+      
+          
+    ul
+      :margin 0
+      :padding 0
+      :list-style none
+
+      li
+        :padding-top 10px
+        :clear both
+                
+      div.product_vendor, div.product_sales_channel
+        :display block
+        :margin 0 0 0 210px
+        :padding 0
+        :width 550px
+        
+    .form-field
+      :padding-top 10px
+    
+    .required
+      :font-weight normal
+      
+      label
+        :border-left $red 5px solid
+        :border-bottom $red 1px dotted
+        
+        &:before
+          :content "\2022\00a0"
+          
+      .fieldWithErrors 
+        :list-style none
+  
+div.fieldWithErrors 
+  :display inline
+  :color $red
+
+  label
+    :border-left 5px solid #F33D3D
+    :border-bottom 1px dotted #F33D3D
+    :font-weight normal
+    :background-color #FFF9C2
