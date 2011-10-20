@@ -50224,3 +50224,44 @@ Rendered shared/nav/_main.html.haml (12.5ms)
 Rendered shared/_flashes.html.haml (2.9ms)
 Rendered executives/index.html.haml within layouts/application (110.3ms)
 Completed 200 OK in 120ms (Views: 115.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 19 21:50:12 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-10-20 02:50:12')
+Rendered shared/nav/_main.html.haml (12.4ms)
+Rendered shared/_flashes.html.haml (55.7ms)
+Rendered welcome/index.html.haml within layouts/application (170.0ms)
+Completed 200 OK in 205ms (Views: 175.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/trail_conditions/1" for 127.0.0.1 at Wed Oct 19 21:50:19 -0500 2011
+  Processing by TrailConditionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+Rendered shared/nav/_main.html.haml (70.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered trail_conditions/show.html.haml within layouts/application (107.6ms)
+Completed 200 OK in 123ms (Views: 113.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 19 21:50:31 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-10-20 02:50:31')
+Rendered shared/nav/_main.html.haml (13.1ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (128.8ms)
+Completed 200 OK in 164ms (Views: 134.2ms | ActiveRecord: 1.2ms)
