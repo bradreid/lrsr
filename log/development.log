@@ -49968,3 +49968,259 @@ Rendered shared/nav/_main.html.haml (13.0ms)
 Rendered shared/_flashes.html.haml (2.8ms)
 Rendered welcome/index.html.haml within layouts/application (130.3ms)
 Completed 200 OK in 166ms (Views: 135.3ms | ActiveRecord: 1.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Wed Oct 19 21:34:08 -0500 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (1.2ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (8.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/newsletter.rb:2)
+  [1m[35mNewsletter Load (0.5ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.5ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (17.8ms)[0m  [1mINSERT INTO "forcasts" ("winnipeg", "created_at", "raw_xml", "updated_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Wed, 19 Oct 2011 8:59 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-2" direction="340" speed="3.22" />
+<yweather:atmosphere humidity="83" visibility="" pressure="1023.6" rising="0" />
+<yweather:astronomy sunrise="7:54 am" sunset="6:28 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 8:59 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Wed, 19 Oct 2011 8:59 pm CDT</pubDate>
+<yweather:condition text="Clear" code="31" temp="-2" date="Wed, 19 Oct 2011 8:59 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/31.gif"/><br />
+<b>Current Conditions:</b><br />
+Clear, -2 C<BR />
+<BR /><b>Forecast:</b><BR />
+Wed - Clear. High: 6 Low: -1<br />
+Thu - Sunny. High: 10 Low: 3<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Wed" date="19 Oct 2011" low="-1" high="6" text="Clear" code="31" />
+<yweather:forecast day="Thu" date="20 Oct 2011" low="3" high="10" text="Sunny" code="32" />
+<guid isPermaLink="false">CAXX0547_2011_10_20_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api18.weather.ac4.yahoo.com uncompressed/chunked Wed Oct 19 19:34:08 PDT 2011 -->
+', '2011-10-20 02:34:08.918735', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Wed, 19 Oct 2011 8:59 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-2" direction="0" speed="0" />
+<yweather:atmosphere humidity="91" visibility="" pressure="1023.4" rising="0" />
+<yweather:astronomy sunrise="7:50 am" sunset="6:24 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 8:59 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Wed, 19 Oct 2011 8:59 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-2" date="Wed, 19 Oct 2011 8:59 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -2 C<BR />
+<BR /><b>Forecast:</b><BR />
+Wed - Clear. High: 6 Low: -1<br />
+Thu - Sunny. High: 10 Low: 2<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Wed" date="19 Oct 2011" low="-1" high="6" text="Clear" code="31" />
+<yweather:forecast day="Thu" date="20 Oct 2011" low="2" high="10" text="Sunny" code="32" />
+<guid isPermaLink="false">CAXX1687_2011_10_20_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api12.weather.ac4.yahoo.com uncompressed/chunked Wed Oct 19 19:34:08 PDT 2011 -->
+', '2011-10-20 02:34:08.918735')[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-10-20 02:34:08')
+Rendered shared/nav/_main.html.haml (6.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (790.7ms)
+Completed 200 OK in 1464ms (Views: 843.1ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:34:13 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered executives/index.html.haml within layouts/application (93.4ms)
+Completed 200 OK in 103ms (Views: 98.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:38:21 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered executives/index.html.haml within layouts/application (45.4ms)
+Completed 200 OK in 109ms (Views: 50.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:38:54 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (58.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered executives/index.html.haml within layouts/application (90.0ms)
+Completed 200 OK in 100ms (Views: 95.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:39:21 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered shared/nav/_main.html.haml (12.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered executives/index.html.haml within layouts/application (95.9ms)
+Completed 200 OK in 106ms (Views: 101.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:42:18 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered executives/index.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (Inconsistent indentation: "  \t\t" was used for indentation, but the rest of the document was indented using 2 spaces.):
+    31:   Bert Berard	Buildings	345-8405	norclo@mts.net
+    32:   Derek Roy	Small Equipment	345-2274	djroy40@gmail.com
+    33:   Myles Nelson	Snowman Rep	223-0418	mnelson1318@gmail.com
+    34:   		345-9290
+    35:   Wally Greenly	Fundraising/Membership	345-8324	wally.greenlay@xplanet.com
+    36:   Claude Cormier	Trails	345-8154	aclee@prairie.ca
+    37:   Lynne	Entertainment	345 1924	LGeswin@hydro.mb.ca
+  app/views/executives/index.html.haml:34
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.8ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:42:28 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered shared/nav/_main.html.haml (65.1ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered executives/index.html.haml within layouts/application (99.1ms)
+Completed 200 OK in 109ms (Views: 104.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:42:46 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (12.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered executives/index.html.haml within layouts/application (98.9ms)
+Completed 200 OK in 108ms (Views: 103.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:42:54 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered shared/nav/_main.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered executives/index.html.haml within layouts/application (93.8ms)
+Completed 200 OK in 103ms (Views: 99.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:44:31 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered executives/index.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %td and nested within it.):
+    42:     %td Treasure	
+    43:     %td 345-6150	
+    44:     %td glroskam@watersidewireless.net
+    45:       Barb Nemeth	Secretary	298-7308	barb.nemeth@shaw.ca
+    46:       Marv Oehlerking	Safety	345-6617	MarvandMyrna@mts.net
+    47:       Bert Berard	Buildings	345-8405	norclo@mts.net
+    48:       Derek Roy	Small Equipment	345-2274	djroy40@gmail.com
+  app/views/executives/index.html.haml:45
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:45:26 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered shared/nav/_main.html.haml (11.8ms)
+Rendered shared/_flashes.html.haml (54.8ms)
+Rendered executives/index.html.haml within layouts/application (102.1ms)
+Completed 200 OK in 111ms (Views: 106.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:48:18 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered executives/index.html.haml within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %td and nested within it.):
+    100:     %td Public Relations	
+    101:     %td 299-8255	
+    102:     %td bsmiley@mpi.mb.ca
+    103:       Vacant	Grooming
+  app/views/executives/index.html.haml:103
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.4ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
+
+
+Started GET "/executives" for 127.0.0.1 at Wed Oct 19 21:48:43 -0500 2011
+  Processing by ExecutivesController#index as HTML
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered shared/nav/_main.html.haml (12.5ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered executives/index.html.haml within layouts/application (110.3ms)
+Completed 200 OK in 120ms (Views: 115.7ms | ActiveRecord: 0.2ms)
