@@ -1,7 +1,30 @@
 %h2
-  Received Contact Requests
-
+  Contact Request Emails
+(When a vistor fills out the contact us form these people will receive an email nontification)
 %br
+= link_to 'Create A New Contact Request Email', new_admin_contact_request_email_path, :class => 'btn blue left_float'
+%br
+%br
+%table.data.nolink
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Email
+      %th
+        Actions
+    %tbody
+      -ContactRequestEmail.all.each do |c|
+        %tr
+          %td
+            =c.name
+          %td
+            =c.email
+          %td
+            =action_images [:admin, c], :exclude => [:index, :show]          
+%h2
+  Received Contact Requests          
 %table.data.nolink
   %thead
     %tr

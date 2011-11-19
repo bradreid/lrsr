@@ -9,10 +9,6 @@ class Article < ActiveRecord::Base
   
   named_scope :front_page, :conditions => {:front_page => true}, :order => 'id desc'
   
-  def first_paragraph
-    self.body.split(/\n/).first if self.body
-  end
-  
 private
  
   def set_current_user
