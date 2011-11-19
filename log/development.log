@@ -52770,3 +52770,64 @@ Rendered shared/nav/_main.html.haml (75.1ms)
 Rendered shared/_flashes.html.haml (2.9ms)
 Rendered welcome/index.html.haml within layouts/application (418.5ms)
 Completed 200 OK in 511ms (Views: 423.0ms | ActiveRecord: 2.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+  [1m[36mContactRequest Load (0.5ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails" LIMIT 1
+  [1m[36mContactRequest Load (0.4ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails" LIMIT 1
+
+Sent mail to bradreid20@gmail.com (2735ms)
+Date: Sat, 19 Nov 2011 12:59:00 +0000
+From: Bradley Cameron <bradreid20@gmail.com>
+To: Brad Reid <bradreid20@gmail.com>
+Message-ID: <4ec7fc88f3da3_2df0800eb1b041711@Brad-Reids-MacBook-Pro.local.mail>
+Subject: LRSR Contact Request: testing
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+this is a test
+of the
+new system.
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+  [1m[36mContactRequest Load (0.4ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails" LIMIT 1
+
+Sent mail to bradreid20@gmail.com (2593ms)
+Date: Sat, 19 Nov 2011 13:08:00 +0000
+From: Bradley Cameron <bradreid20@gmail.com>
+To: Brad Reid <bradreid20@gmail.com>
+Message-ID: <4ec7fe9096a35_2e80800eb1b0240a6@Brad-Reids-MacBook-Pro.local.mail>
+Subject: LRSR Contact Request: testing
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+this is a test
+of the
+new system.
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+  [1m[36mContactRequest Load (0.5ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails" LIMIT 1
+  [1m[36mContactRequest Load (0.5ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails" LIMIT 1
+  [1m[36mContactRequest Load (0.6ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails" LIMIT 1
+
+Sent mail to bradreid20@gmail.com (2418ms)
+Date: Sat, 19 Nov 2011 13:12:00 +0000
+From: Bradley Cameron <bradreid20@gmail.com>
+Reply-To: Bradley Cameron <bradreid20@gmail.com>
+To: Brad Reid <bradreid20@gmail.com>
+Message-ID: <4ec7ffabe30f7_2e9f800eb1b031720@Brad-Reids-MacBook-Pro.local.mail>
+Subject: LRSR Contact Request: testing
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+this is a test
+of the
+new system.
