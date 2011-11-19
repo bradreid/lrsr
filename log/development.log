@@ -52831,3 +52831,210 @@ Content-Transfer-Encoding: 7bit
 this is a test
 of the
 new system.
+
+
+Started GET "/contact_requests/new" for 127.0.0.1 at Sat Nov 19 13:16:38 -0600 2011
+  Processing by ContactRequestsController#new as HTML
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered contact_requests/_form.html.haml (61.0ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_contact_requests_new_html_haml___232283357_2193286980_0 at /Users/breid/code/lrsr/app/views/contact_requests/new.html.haml:3)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (20.0ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered contact_requests/new.html.haml within layouts/application (123.2ms)
+Completed 200 OK in 137ms (Views: 128.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/contact_requests" for 127.0.0.1 at Sat Nov 19 13:16:49 -0600 2011
+  Processing by ContactRequestsController#create as HTML
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓", "contact_request"=>{"name"=>"a test name", "subject"=>"test", "message"=>"test", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "contact_requests" ("subject", "created_at", "name", "message", "email", "received", "updated_at") VALUES ('test', '2011-11-19 19:16:49.258025', 'a test name', 'test', 'bradreid20@gmail.com', 'f', '2011-11-19 19:16:49.258025')[0m
+  [1m[35mContactRequestEmail Load (0.1ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails"
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 13:16:49 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "forcasts" ("raw_xml", "created_at", "winnipeg", "updated_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 19 Nov 2011 11:59 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-18" direction="330" speed="9.66" />
+<yweather:atmosphere humidity="74" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:41 am" sunset="4:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 11:59 am CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 19 Nov 2011 11:59 am CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-13" date="Sat, 19 Nov 2011 11:59 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -13 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Flurries. High: -10 Low: -14<br />
+Sun - Partly Cloudy. High: -8 Low: -11<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="19 Nov 2011" low="-14" high="-10" text="Flurries" code="13" />
+<yweather:forecast day="Sun" date="20 Nov 2011" low="-11" high="-8" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX1687_2011_11_20_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api13.weather.ac4.yahoo.com uncompressed/chunked Sat Nov 19 11:16:49 PST 2011 -->
+', '2011-11-19 19:16:49.978933', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 19 Nov 2011 11:59 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-23" direction="340" speed="20.92" />
+<yweather:atmosphere humidity="67" visibility="" pressure="1023.4" rising="2" />
+<yweather:astronomy sunrise="7:45 am" sunset="4:39 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 11:59 am CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 19 Nov 2011 11:59 am CST</pubDate>
+<yweather:condition text="Partly Cloudy" code="30" temp="-14" date="Sat, 19 Nov 2011 11:59 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/30.gif"/><br />
+<b>Current Conditions:</b><br />
+Partly Cloudy, -14 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Flurries. High: -11 Low: -14<br />
+Sun - Partly Cloudy. High: -8 Low: -12<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="19 Nov 2011" low="-14" high="-11" text="Flurries" code="13" />
+<yweather:forecast day="Sun" date="20 Nov 2011" low="-12" high="-8" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX0547_2011_11_20_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api17.weather.ac4.yahoo.com uncompressed/chunked Sat Nov 19 11:16:49 PST 2011 -->
+', '2011-11-19 19:16:49.978933')[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 19:16:49')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (76.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered welcome/index.html.haml within layouts/application (141.2ms)
+Completed 200 OK in 865ms (Views: 150.3ms | ActiveRecord: 2.8ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+  [1m[36mContactRequest Load (0.4ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1[0m
+  [1m[35mContactRequest Load (0.2ms)[0m  SELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1
+  [1m[36mContactRequestEmail Load (0.1ms)[0m  [1mSELECT "contact_request_emails".* FROM "contact_request_emails"[0m
+  [1m[35mContactRequest Load (0.6ms)[0m  SELECT "contact_requests".* FROM "contact_requests" ORDER BY contact_requests.id DESC LIMIT 1
+  [1m[36mContactRequestEmail Load (0.1ms)[0m  [1mSELECT "contact_request_emails".* FROM "contact_request_emails"[0m
+
+Sent mail to bradreid20@gmail.com (2549ms)
+Date: Sat, 19 Nov 2011 13:19:00 +0000
+From: a test name <bradreid20@gmail.com>
+Reply-To: a test name <bradreid20@gmail.com>
+To: Brad Reid <bradreid20@gmail.com>
+Message-ID: <4ec80134628a7_2faf800eb1b07102b@Brad-Reids-MacBook-Pro.local.mail>
+Subject: LRSR Contact Request: test
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+test
+
+
+Started GET "/contact_requests/new" for 127.0.0.1 at Sat Nov 19 13:19:49 -0600 2011
+  Processing by ContactRequestsController#new as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered contact_requests/_form.html.haml (62.7ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_contact_requests_new_html_haml___232283357_2192151260_0 at /Users/breid/code/lrsr/app/views/contact_requests/new.html.haml:3)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (18.8ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered contact_requests/new.html.haml within layouts/application (123.9ms)
+Completed 200 OK in 137ms (Views: 128.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/contact_requests" for 127.0.0.1 at Sat Nov 19 13:20:04 -0600 2011
+  Processing by ContactRequestsController#create as HTML
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓", "contact_request"=>{"name"=>"John Daly", "subject"=>"test", "message"=>"testing john daly@john.com", "email"=>"john@daly.com"}}
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "contact_requests" ("name", "email", "received", "message", "created_at", "subject", "updated_at") VALUES ('John Daly', 'john@daly.com', 'f', 'testing john daly@john.com', '2011-11-19 19:20:04.862660', 'test', '2011-11-19 19:20:04.862660')
+  [1m[36mContactRequestEmail Load (0.1ms)[0m  [1mSELECT "contact_request_emails".* FROM "contact_request_emails"[0m
+
+Sent mail to bradreid20@gmail.com (2069ms)
+Date: Sat, 19 Nov 2011 13:20:00 +0000
+From: John Daly <john@daly.com>
+Reply-To: John Daly <john@daly.com>
+To: Brad Reid <bradreid20@gmail.com>
+Message-ID: <4ec80164ddec0_2d6082bd2edc336a6@Brad-Reids-MacBook-Pro.local.mail>
+Subject: LRSR Contact Request: test
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+testing john daly@john.com
+Redirected to http://localhost:3000/
+Completed 302 Found in 2124ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 13:20:06 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 19:20:07')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (19.9ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (138.6ms)
+Completed 200 OK in 232ms (Views: 142.9ms | ActiveRecord: 2.4ms)
