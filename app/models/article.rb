@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
   validates_presence_of :title, :body
   before_create :set_current_user
   
+  named_scope :front_page, :conditions => {:front_page => true}, :order => 'id desc'
+  
   
 private
  
