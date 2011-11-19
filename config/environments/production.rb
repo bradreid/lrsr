@@ -12,7 +12,19 @@ Lrsr::Application.configure do
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
   
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'www.lrsr.ca' }
+
+  config.action_mailer.delivery_method = :smtp  
+  config.action_mailer.raise_delivery_errors = true
+
+  ActionMailer::Base.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address  => "smtp.gmail.com",
+    :port  => 587,
+    :user_name  => "brad@beyondthecube.ca",
+    :password  => "brad6726847",
+    :authentication  => :plain
+  }  
   
 
   # For nginx:
