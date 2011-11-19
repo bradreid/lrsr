@@ -10,6 +10,8 @@
       %th
         Title
       %th
+        Front Page
+      %th
         Created By
       %th
         Created On
@@ -21,6 +23,8 @@
         %td
           =article.title
         %td
+          =article.front_page? ? 'Yes' : 'No'
+        %td
           =article.created_by.email
         %td
           =article.created_at.to_formatted_s(:short_with_year)
@@ -28,5 +32,5 @@
           =action_images [:admin, article], :exclude => [:index]
   %tfoot
     %tr
-      %td{:colspan => 4}
+      %td{:colspan => 5}
         = paginate @articles

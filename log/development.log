@@ -50265,3 +50265,747 @@ Rendered shared/nav/_main.html.haml (13.1ms)
 Rendered shared/_flashes.html.haml (2.9ms)
 Rendered welcome/index.html.haml within layouts/application (128.8ms)
 Completed 200 OK in 164ms (Views: 134.2ms | ActiveRecord: 1.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 22:45:17 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (1.2ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (18.4ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/newsletter.rb:2)
+  [1m[35mNewsletter Load (0.4ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.6ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (9.8ms)[0m  [1mINSERT INTO "forcasts" ("updated_at", "created_at", "winnipeg", "raw_xml") VALUES ('2011-11-19 04:45:19.039978', '2011-11-19 04:45:19.039978', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Fri, 18 Nov 2011 9:59 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-19" direction="350" speed="33.8" />
+<yweather:atmosphere humidity="91" visibility="1.61" pressure="1012.5" rising="1" />
+<yweather:astronomy sunrise="7:43 am" sunset="4:41 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 9:59 pm CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Fri, 18 Nov 2011 9:59 pm CST</pubDate>
+<yweather:condition text="Light Snow" code="14" temp="-9" date="Fri, 18 Nov 2011 9:59 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/14.gif"/><br />
+<b>Current Conditions:</b><br />
+Light Snow, -9 C<BR />
+<BR /><b>Forecast:</b><BR />
+Fri - Snow Showers Early. High: -4 Low: -13<br />
+Sat - Partly Cloudy. High: -10 Low: -14<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Fri" date="18 Nov 2011" low="-13" high="-4" text="Snow Showers Early" code="46" />
+<yweather:forecast day="Sat" date="19 Nov 2011" low="-14" high="-10" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX0547_2011_11_19_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api17.weather.ac4.yahoo.com uncompressed Fri Nov 18 20:45:05 PST 2011 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Fri, 18 Nov 2011 7:59 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-11" direction="20" speed="8.05" />
+<yweather:atmosphere humidity="91" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:41 am" sunset="4:34 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 7:59 pm CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Fri, 18 Nov 2011 7:59 pm CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-7" date="Fri, 18 Nov 2011 7:59 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -7 C<BR />
+<BR /><b>Forecast:</b><BR />
+Fri - Snow Showers Early. High: -4 Low: -13<br />
+Sat - Partly Cloudy. High: -10 Low: -14<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Fri" date="18 Nov 2011" low="-13" high="-4" text="Snow Showers Early" code="46" />
+<yweather:forecast day="Sat" date="19 Nov 2011" low="-14" high="-10" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX1687_2011_11_19_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api5.weather.ac4.yahoo.com uncompressed/chunked Fri Nov 18 20:45:19 PST 2011 -->
+')[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 04:45:18')
+Rendered shared/nav/_main.html.haml (67.0ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (781.1ms)
+Completed 200 OK in 1780ms (Views: 826.2ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 22:45:25 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 04:45:25')
+Rendered shared/nav/_main.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (124.6ms)
+Completed 200 OK in 159ms (Views: 129.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Fri Nov 18 22:45:33 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Completed   in 74ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Fri Nov 18 22:45:33 -0600 2011
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/nav/_main.html.haml (6.4ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (99.4ms)
+Completed 200 OK in 131ms (Views: 113.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Fri Nov 18 22:45:45 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1
+Completed   in 144ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered shared/nav/_main.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (96.2ms)
+Completed 200 OK in 192ms (Views: 101.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Fri Nov 18 22:45:59 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"admin@lrsr.ca"}}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@lrsr.ca' LIMIT 1[0m
+Completed   in 69ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"admin@lrsr.ca"}}
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/nav/_main.html.haml (6.6ms)
+Rendered shared/_flashes.html.haml (3.3ms)
+Rendered devise/sessions/new.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 143ms (Views: 49.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Fri Nov 18 22:46:02 -0600 2011
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered shared/nav/_main.html.haml (6.6ms)
+Rendered shared/_flashes.html.haml (57.4ms)
+Rendered devise/registrations/new.html.erb within layouts/application (108.8ms)
+Completed 200 OK in 135ms (Views: 124.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at Fri Nov 18 22:46:08 -0600 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."email" = 'bradreid20@gmail.com') LIMIT 1[0m
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered shared/nav/_main.html.haml (6.2ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 223ms (Views: 103.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Fri Nov 18 22:46:13 -0600 2011
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/nav/_main.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 120ms (Views: 104.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Fri Nov 18 22:46:24 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1
+Completed   in 155ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered shared/nav/_main.html.haml (7.1ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 141ms (Views: 50.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Fri Nov 18 22:46:35 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"tAQcqZIw88gKasXs1h7ndROnFeF9ugewUfhQEShVgGk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "updated_at" = '2011-11-19 04:46:35.580418', "last_sign_in_at" = '2011-07-03 00:32:17.864027', "sign_in_count" = 17, "current_sign_in_at" = '2011-11-19 04:46:35.579927' WHERE "users"."id" = 1
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 115ms
+
+
+Started GET "/admin" for 127.0.0.1 at Fri Nov 18 22:46:35 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/index.html.haml within layouts/application (100.1ms)
+Completed 200 OK in 132ms (Views: 105.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/articles" for 127.0.0.1 at Fri Nov 18 22:46:38 -0600 2011
+  Processing by Admin::ArticlesController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+Rendered shared/nav/_admin.html.haml (6.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/articles/index.html.haml within layouts/application (65.5ms)
+Completed 200 OK in 158ms (Views: 73.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/articles/1" for 127.0.0.1 at Fri Nov 18 22:47:09 -0600 2011
+  Processing by Admin::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+Rendered shared/nav/_admin.html.haml (63.4ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/articles/show.html.haml within layouts/application (95.9ms)
+Completed 200 OK in 143ms (Views: 114.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at Fri Nov 18 22:47:15 -0600 2011
+  Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+Rendered admin/articles/_form.html.haml (3.8ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_articles_edit_html_haml___1553050822_2195481760_0 at /Users/breid/code/lrsr/app/views/admin/articles/edit.html.haml:3)
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (3.7ms)
+Rendered admin/articles/edit.html.haml within layouts/application (106.1ms)
+Completed 200 OK in 151ms (Views: 123.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 22:47:22 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 04:47:22')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (19.7ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered welcome/index.html.haml within layouts/application (128.7ms)
+Completed 200 OK in 218ms (Views: 133.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 22:47:32 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 04:47:32')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (19.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (130.0ms)
+Completed 200 OK in 219ms (Views: 134.6ms | ActiveRecord: 1.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /Users/breid/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 08:12:19 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/newsletter.rb:2)
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "forcasts" ("raw_xml", "winnipeg", "updated_at", "created_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 19 Nov 2011 6:58 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-22" direction="340" speed="9.66" />
+<yweather:atmosphere humidity="82" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:41 am" sunset="4:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 6:58 am CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 19 Nov 2011 6:58 am CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-16" date="Sat, 19 Nov 2011 6:58 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Flurries. High: -10 Low: -14<br />
+Sun - Partly Cloudy. High: -8 Low: -11<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="19 Nov 2011" low="-14" high="-10" text="Flurries" code="13" />
+<yweather:forecast day="Sun" date="20 Nov 2011" low="-11" high="-8" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX1687_2011_11_20_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api14.weather.ac4.yahoo.com uncompressed/chunked Sat Nov 19 06:12:20 PST 2011 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 19 Nov 2011 6:58 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-27" direction="330" speed="14.48" />
+<yweather:atmosphere humidity="66" visibility="" pressure="1021.7" rising="1" />
+<yweather:astronomy sunrise="7:45 am" sunset="4:39 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 6:58 am CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 19 Nov 2011 6:58 am CST</pubDate>
+<yweather:condition text="Partly Cloudy" code="29" temp="-18" date="Sat, 19 Nov 2011 6:58 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/29.gif"/><br />
+<b>Current Conditions:</b><br />
+Partly Cloudy, -18 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Flurries. High: -11 Low: -14<br />
+Sun - Partly Cloudy. High: -8 Low: -12<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="19 Nov 2011" low="-14" high="-11" text="Flurries" code="13" />
+<yweather:forecast day="Sun" date="20 Nov 2011" low="-12" high="-8" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX0547_2011_11_20_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api6.weather.ac4.yahoo.com uncompressed/chunked Sat Nov 19 06:12:20 PST 2011 -->
+', '2011-11-19 14:12:20.732347', '2011-11-19 14:12:20.732347')[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 14:12:19')
+Rendered shared/nav/_main.html.haml (68.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (819.7ms)
+Completed 200 OK in 1752ms (Views: 862.4ms | ActiveRecord: 2.2ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110623132714)
+Migrating to CreateEvents (20110624133752)
+Migrating to AddArticle (20110624193205)
+Migrating to AddTrailConditions (20110625132123)
+Migrating to AddCachedWeather (20110626152144)
+Migrating to AddWinnipegWeatherToForcast (20110626214907)
+Migrating to AddContactRequest (20110628165834)
+Migrating to AddNewsLetters (20110628213825)
+Migrating to AddSponsors (20110630203517)
+Migrating to AddFrontPageToArticle (20111119141250)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.4ms)[0m  [1mALTER TABLE "articles" ADD "front_page" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111119141250')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("articles")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("contact_requests")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("events")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("forcasts")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("newsletters")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("sponsors")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_sponsors_on_name')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("trail_conditions")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Nov 19 08:14:26 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Completed   in 10ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sat Nov 19 08:14:26 -0600 2011
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (1.3ms)
+Rendered shared/nav/_main.html.haml (6.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 134ms (Views: 118.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Nov 19 08:14:38 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-11-19 04:46:35.579927', "sign_in_count" = 18, "updated_at" = '2011-11-19 14:14:38.762109', "current_sign_in_at" = '2011-11-19 14:14:38.761603' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 206ms
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Nov 19 08:14:38 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/index.html.haml within layouts/application (100.4ms)
+Completed 200 OK in 146ms (Views: 107.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/articles" for 127.0.0.1 at Sat Nov 19 08:14:41 -0600 2011
+  Processing by Admin::ArticlesController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/articles/index.html.haml within layouts/application (122.3ms)
+Completed 200 OK in 196ms (Views: 168.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at Sat Nov 19 08:14:44 -0600 2011
+  Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+Rendered admin/articles/_form.html.haml (6.5ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_articles_edit_html_haml___1553050822_2196432960_0 at /Users/breid/code/lrsr/app/views/admin/articles/edit.html.haml:3)
+Rendered shared/nav/_admin.html.haml (57.2ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/articles/edit.html.haml within layouts/application (116.1ms)
+Completed 200 OK in 245ms (Views: 160.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/articles/1" for 127.0.0.1 at Sat Nov 19 08:14:48 -0600 2011
+  Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"President's Message", "body"=>"Reminders: Poker derby Saturday February 5th, start time 9:30 - 1:30, finish time by 3:30, you can start at any of the 5 check-points, Alf's, Anson's, GG's, Trapper's, Tall Timber Lodge, Snowmobile dealer displays, silent auctions at both GG's & Trappers. Hands 10.00 each or 3 for $20.00\r\n \r\nValentine's Dinner, Saturday February 12th, Pinawa Golf Club, cocktails 5:00pm, dinner's $20.00 plus taxes, choice of  barbecued grilled chicken or seasoned striploin.  Please let Lynne Geswin 345-1924 or email lgeswin@hydro.mb.ca know by Monday Feb.7th if attending.\r\n \r\nUpgraded Trail Status Information:\r\n-  Steve's Trail between Coppermine Bay & the Anson trail is closed as there is aprox 12\" of water in the big swamp. We'll continue to monitor this.\r\n \r\n-  Use caution  on the Bird River stick line - There is work being done on the north shore; I'm advised the Contractor had initially plowed a road across our trail leaving windrows of aprox 12 to 24,'' which our groomer had to knock down, they also and made a road  parallel to the north shore leaving  huge windrows and snow piles.\r\n \r\nThis will be the last Presidents Update sent to Non-members:\r\nAs there are still a number of unpaid memberships for this season,  this is to advise that next week these names will be removed from our active list which will mean such individuals will no longer receive Club Emails such as these or our Newsletters. For further information or to confirm your membership status, please contact Wally Greenlay @ 345-8324.  \r\n \r\nRegards,\r\nBarry", "front_page"=>"1"}, "commit"=>"Update", "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "articles" SET "updated_at" = '2011-11-19 14:14:48.303485', "front_page" = 't' WHERE "articles"."id" = 1
+Redirected to http://localhost:3000/admin/articles/1
+Completed 302 Found in 34ms
+
+
+Started GET "/admin/articles/1" for 127.0.0.1 at Sat Nov 19 08:14:48 -0600 2011
+  Processing by Admin::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (58.6ms)
+Rendered admin/articles/show.html.haml within layouts/application (95.6ms)
+Completed 200 OK in 166ms (Views: 137.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at Sat Nov 19 08:14:58 -0600 2011
+  Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+Rendered admin/articles/_form.html.haml (4.4ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_articles_edit_html_haml___1553050822_2195737420_0 at /Users/breid/code/lrsr/app/views/admin/articles/edit.html.haml:3)
+Rendered shared/nav/_admin.html.haml (6.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/articles/edit.html.haml within layouts/application (108.0ms)
+Completed 200 OK in 145ms (Views: 115.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Nov 19 08:15:00 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/index.html.haml within layouts/application (92.0ms)
+Completed 200 OK in 119ms (Views: 97.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/articles" for 127.0.0.1 at Sat Nov 19 08:15:02 -0600 2011
+  Processing by Admin::ArticlesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/articles/index.html.haml within layouts/application (50.2ms)
+Completed 200 OK in 145ms (Views: 57.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at Sat Nov 19 08:15:05 -0600 2011
+  Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+Rendered admin/articles/_form.html.haml (4.3ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_articles_edit_html_haml___1553050822_2196191120_0 at /Users/breid/code/lrsr/app/views/admin/articles/edit.html.haml:3)
+Rendered shared/nav/_admin.html.haml (6.3ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/articles/edit.html.haml within layouts/application (99.1ms)
+Completed 200 OK in 135ms (Views: 106.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/articles" for 127.0.0.1 at Sat Nov 19 08:15:54 -0600 2011
+  Processing by Admin::ArticlesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+Rendered shared/nav/_admin.html.haml (5.3ms)
+Rendered shared/_flashes.html.haml (2.4ms)
+Rendered admin/articles/index.html.haml within layouts/application (98.2ms)
+Completed 200 OK in 131ms (Views: 105.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/articles" for 127.0.0.1 at Sat Nov 19 08:16:03 -0600 2011
+  Processing by Admin::ArticlesController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (55.9ms)
+Rendered admin/articles/index.html.haml within layouts/application (102.5ms)
+Completed 200 OK in 197ms (Views: 109.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/articles/new" for 127.0.0.1 at Sat Nov 19 08:16:54 -0600 2011
+  Processing by Admin::ArticlesController#new as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered admin/articles/_form.html.haml (4.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_articles_new_html_haml__1753584598_2196009620_0 at /Users/breid/code/lrsr/app/views/admin/articles/new.html.haml:3)
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/articles/new.html.haml within layouts/application (105.1ms)
+Completed 200 OK in 176ms (Views: 150.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/articles" for 127.0.0.1 at Sat Nov 19 08:17:12 -0600 2011
+  Processing by Admin::ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Testing", "body"=>"This is a dummy article to test the front page.", "front_page"=>"1"}, "commit"=>"Create", "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "articles" ("title", "front_page", "created_by_id", "updated_at", "body", "created_at") VALUES ('Testing', 't', 1, '2011-11-19 14:17:13.022594', 'This is a dummy article to test the front page.', '2011-11-19 14:17:13.022594')
+Redirected to http://localhost:3000/admin/articles
+Completed 302 Found in 35ms
+
+
+Started GET "/admin/articles" for 127.0.0.1 at Sat Nov 19 08:17:13 -0600 2011
+  Processing by Admin::ArticlesController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+Rendered shared/nav/_admin.html.haml (6.2ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/articles/index.html.haml within layouts/application (104.9ms)
+Completed 200 OK in 139ms (Views: 112.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 08:17:16 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY articles.id DESC LIMIT 1[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 14:17:16')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (74.2ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (186.0ms)
+Completed 200 OK in 220ms (Views: 191.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 08:19:57 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't'[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 14:19:57')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (74.3ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (190.1ms)
+Completed 200 OK in 225ms (Views: 194.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 08:20:52 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 14:20:52')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (19.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (131.7ms)
+Completed 200 OK in 167ms (Views: 136.5ms | ActiveRecord: 1.5ms)

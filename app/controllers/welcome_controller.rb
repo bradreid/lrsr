@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   
   def index
     @events = Event.upcomming
-    @article = Article.last
+    @articles = Article.front_page
     @trail_condition = TrailCondition.club_trails
     @newsletter = Newsletter.last
     @weather = Forcast.latest
