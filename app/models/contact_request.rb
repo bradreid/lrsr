@@ -3,8 +3,6 @@ class ContactRequest < ActiveRecord::Base
   after_create :notify
   
   def notify
-    ContactRequestEmail.all.each do |c|
-      Notifier.contact_request(self, c).deliver
-    end
+    Notifier.contact_request(self, ContactRequestEmail.all).deliver
   end
 end
