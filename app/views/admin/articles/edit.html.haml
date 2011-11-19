@@ -1,6 +1,6 @@
 %div.form
   %h2="Edit: #{@article.title}: #{@article.created_at.to_formatted_s(:short_with_year)}"
-  - form_for [:admin, @article], :builder => LrsrFormBuilder do |f|
+  - form_for [:admin, @article], :html => { :multipart => true }, :builder => LrsrFormBuilder do |f|
     = f.error_messages
     = render :partial => "form", :object => f
     %br

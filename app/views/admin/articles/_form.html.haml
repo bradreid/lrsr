@@ -7,6 +7,10 @@
     %li.form-field.required
       =form.label :front_page, 'Display on front page'
       =form.check_box :front_page
+      
+    %li.form-field
+      = form.label :image
+      = form.file_field :image      
   
     %li.form-field.required
       = form.label :body
