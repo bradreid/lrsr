@@ -53038,3 +53038,215 @@ Rendered shared/nav/_main.html.haml (19.9ms)
 Rendered shared/_flashes.html.haml (2.9ms)
 Rendered welcome/index.html.haml within layouts/application (138.6ms)
 Completed 200 OK in 232ms (Views: 142.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Nov 19 13:27:16 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (60.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/index.html.haml within layouts/application (101.1ms)
+Completed 200 OK in 129ms (Views: 106.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/contact_requests" for 127.0.0.1 at Sat Nov 19 13:27:17 -0600 2011
+  Processing by Admin::ContactRequestsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mContactRequestEmail Load (0.2ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails"
+  [1m[36mContactRequest Load (0.4ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests"
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/contact_requests/index.html.haml within layouts/application (139.0ms)
+Completed 200 OK in 169ms (Views: 145.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/contact_request_emails/new" for 127.0.0.1 at Sat Nov 19 13:27:20 -0600 2011
+  Processing by Admin::ContactRequestEmailsController#new as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Rendered admin/contact_request_emails/_form.html.haml (3.6ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_contact_request_emails_new_html_haml___893611472_2193190780_0 at /Users/breid/code/lrsr/app/views/admin/contact_request_emails/new.html.haml:3)
+Rendered shared/nav/_admin.html.haml (6.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/contact_request_emails/new.html.haml within layouts/application (103.4ms)
+Completed 200 OK in 139ms (Views: 111.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/contact_request_emails" for 127.0.0.1 at Sat Nov 19 13:27:29 -0600 2011
+  Processing by Admin::ContactRequestEmailsController#create as HTML
+  Parameters: {"commit"=>"Submit", "contact_request_email"=>{"name"=>"Brad Reid", "email"=>"brad@beyondthecube.ca"}, "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "contact_request_emails" ("name", "updated_at", "created_at", "email") VALUES ('Brad Reid', '2011-11-19 19:27:29.586716', '2011-11-19 19:27:29.586716', 'brad@beyondthecube.ca')[0m
+Redirected to http://localhost:3000/admin/contact_requests
+Completed 302 Found in 31ms
+
+
+Started GET "/admin/contact_requests" for 127.0.0.1 at Sat Nov 19 13:27:29 -0600 2011
+  Processing by Admin::ContactRequestsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mContactRequestEmail Load (0.2ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails"
+  [1m[36mContactRequest Load (0.4ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests"
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/contact_requests/index.html.haml within layouts/application (145.9ms)
+Completed 200 OK in 177ms (Views: 152.9ms | ActiveRecord: 2.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started POST "/admin/contact_requests/14" for 127.0.0.1 at Sat Nov 19 13:29:41 -0600 2011
+  Processing by Admin::ContactRequestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "id"=>"14"}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mContactRequest Load (0.1ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."id" = 14 LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "contact_requests" WHERE "contact_requests"."id" = 14[0m
+Redirected to http://localhost:3000/admin/contact_requests
+Completed 302 Found in 52ms
+
+
+Started GET "/admin/contact_requests" for 127.0.0.1 at Sat Nov 19 13:29:41 -0600 2011
+  Processing by Admin::ContactRequestsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mContactRequestEmail Load (0.2ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails"
+  [1m[36mContactRequest Load (0.4ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests"
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/contact_requests/index.html.haml within layouts/application (140.9ms)
+Completed 200 OK in 173ms (Views: 148.1ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/admin/contact_requests/13" for 127.0.0.1 at Sat Nov 19 13:29:45 -0600 2011
+  Processing by Admin::ContactRequestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "id"=>"13"}
+  [1m[36mSponsor Load (0.4ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."id" = 13 LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "contact_requests" WHERE "contact_requests"."id" = 13
+Redirected to http://localhost:3000/admin/contact_requests
+Completed 302 Found in 83ms
+
+
+Started GET "/admin/contact_requests" for 127.0.0.1 at Sat Nov 19 13:29:45 -0600 2011
+  Processing by Admin::ContactRequestsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mContactRequestEmail Load (0.2ms)[0m  [1mSELECT "contact_request_emails".* FROM "contact_request_emails"[0m
+  [1m[35mContactRequest Load (0.3ms)[0m  SELECT "contact_requests".* FROM "contact_requests" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests"[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/contact_requests/index.html.haml within layouts/application (142.3ms)
+Completed 200 OK in 172ms (Views: 149.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/contact_requests/12" for 127.0.0.1 at Sat Nov 19 13:29:48 -0600 2011
+  Processing by Admin::ContactRequestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "id"=>"12"}
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mContactRequest Load (0.1ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."id" = 12 LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "contact_requests" WHERE "contact_requests"."id" = 12[0m
+Redirected to http://localhost:3000/admin/contact_requests
+Completed 302 Found in 28ms
+
+
+Started GET "/admin/contact_requests" for 127.0.0.1 at Sat Nov 19 13:29:48 -0600 2011
+  Processing by Admin::ContactRequestsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mContactRequestEmail Load (0.2ms)[0m  SELECT "contact_request_emails".* FROM "contact_request_emails"
+  [1m[36mContactRequest Load (0.3ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests"
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/contact_requests/index.html.haml within layouts/application (193.8ms)
+Completed 200 OK in 223ms (Views: 200.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/contact_requests/new" for 127.0.0.1 at Sat Nov 19 13:29:52 -0600 2011
+  Processing by ContactRequestsController#new as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered contact_requests/_form.html.haml (8.2ms)
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_contact_requests_new_html_haml___232283357_2194585520_0 at /Users/breid/code/lrsr/app/views/contact_requests/new.html.haml:3)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (20.0ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered contact_requests/new.html.haml within layouts/application (127.8ms)
+Completed 200 OK in 142ms (Views: 133.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/contact_requests" for 127.0.0.1 at Sat Nov 19 13:30:04 -0600 2011
+  Processing by ContactRequestsController#create as HTML
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"J3Fw2GWUpmuXhwWRn+OEWH4RrenqsAxSohnB0z9Y25c=", "utf8"=>"✓", "contact_request"=>{"name"=>"multiple emails", "subject"=>"test", "message"=>"test", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "contact_requests" ("email", "created_at", "message", "updated_at", "subject", "received", "name") VALUES ('bradreid20@gmail.com', '2011-11-19 19:30:04.324274', 'test', '2011-11-19 19:30:04.324274', 'test', 'f', 'multiple emails')
+  [1m[36mContactRequestEmail Load (0.2ms)[0m  [1mSELECT "contact_request_emails".* FROM "contact_request_emails"[0m
+
+Sent mail to bradreid20@gmail.com, brad@beyondthecube.ca (2622ms)
+Date: Sat, 19 Nov 2011 13:30:00 +0000
+From: multiple emails <bradreid20@gmail.com>
+Reply-To: multiple emails <bradreid20@gmail.com>
+To: Brad Reid <bradreid20@gmail.com>, 
+ Brad Reid <brad@beyondthecube.ca>
+Message-ID: <4ec803bc67e1f_306382d96ffc892b8@Brad-Reids-MacBook-Pro.local.mail>
+Subject: LRSR Contact Request: test
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+test
+Redirected to http://localhost:3000/
+Completed 302 Found in 2869ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Nov 19 13:30:07 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-19 19:30:07')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (20.7ms)
+Rendered shared/_flashes.html.haml (58.5ms)
+Rendered welcome/index.html.haml within layouts/application (429.0ms)
+Completed 200 OK in 520ms (Views: 433.8ms | ActiveRecord: 2.5ms)
