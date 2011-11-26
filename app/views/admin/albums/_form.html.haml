@@ -1,0 +1,9 @@
+%fieldset
+  %ul
+    %li.form-field.required
+      = form.label :title
+      = form.text_field :title, :maxlength=> 255, :size => 50
+  
+    %li.form-field
+      = form.label :description
+      = form.text_area :description, :rows => 5
