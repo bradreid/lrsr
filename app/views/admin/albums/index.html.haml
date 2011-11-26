@@ -1,0 +1,28 @@
+%h2
+  Photo Albums
+
+= link_to 'Create A New Photo Album', new_admin_album_path, :class => 'btn blue left_float'
+%br
+%br
+%table.data
+  %thead
+    %tr
+      %th
+        ID
+      %th
+        Title
+      %th
+        Description
+      %th
+        Actions
+  %tbody
+    -@albums.each do |a|
+      %tr
+        %td
+          =a.id
+        %td
+          =a.title
+        %td
+          =a.description
+        %td
+          =action_images [:admin, a], :exclude => [:index]

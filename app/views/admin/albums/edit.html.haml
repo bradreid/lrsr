@@ -1,0 +1,11 @@
+%div.form
+  %h2="Edit Photo Album: #{@album.title}"
+  - form_for [:admin, @album], :builder => LrsrFormBuilder do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %br
+    = submit_tag "Update", :class => "btn green left_float"
+    
+    = link_to "Cancel", admin_albums_path, :class => "btn red left_float"
+%br
+%br

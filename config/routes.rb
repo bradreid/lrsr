@@ -8,6 +8,7 @@ Lrsr::Application.routes.draw do
     resources :trail_conditions
     resources :sponsors
     resources :contact_request_emails
+    resources :albums
     resources :contact_requests do
       collection do
         get 'received'
