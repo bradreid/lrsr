@@ -16,6 +16,11 @@
         %br
     %td{:width => '10px'}
     %td{:width => '268px', :valign => 'top'}
+      LRSR Sponsor:
+      %br
+      =link_to @sponsor.name, (@sponsor.url.blank? ? sponsors_path : @sponsor.url)
+      %br
+      %br
       %table{:border => 0, :cellspacing => 10, :cellpadding => 0, :width => "334px", :bgcolor => '#DCDCDC'}
         %tr
           %td

@@ -1,0 +1,15 @@
+%h2
+  =@album.title
+=simple_format @album.description
+
+%br
+%br
+%table{:cellspacing => 0, :border => 0}
+  -@album.album_pictures.all.each_slice(3) do |x,y,z|
+    %tr
+      %td{:width => '280px'}
+        =link_to image_tag(x.image(:medium)), x.image.url
+      %td{:width => '280px'}
+        =link_to image_tag(y.image(:medium)), y.image.url if y
+      %td{:width => '280px'}
+        =link_to image_tag(z.image(:medium)), z.image.url if z
