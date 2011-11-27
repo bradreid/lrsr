@@ -8,12 +8,15 @@
   %tr
     %td{:width => '680px', :valign => 'top'}
       -@articles.each do |a|
-        .center.title.bold
-          =a.try(:title)
-        %br
-        =image_tag(a.image(:medium), :style => 'float:right;padding:5px;padding-top:30px') if a.image_file_name
-        =simple_format(a.try(:body))
-        %br
+        %table
+          %tr
+            %td
+              .center.title.bold
+                =a.try(:title)
+              %br
+              =image_tag(a.image(:medium), :style => 'float:right;padding:5px;padding-top:30px') if a.image_file_name
+              =simple_format(a.try(:body))
+              %br
     %td{:width => '10px'}
     %td{:width => '268px', :valign => 'top'}
       LRSR Sponsor:
