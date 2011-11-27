@@ -56989,3 +56989,15 @@ Rendered shared/nav/_main.html.haml (80.3ms)
 Rendered shared/_flashes.html.haml (3.2ms)
 Rendered welcome/index.html.haml within layouts/application (203.0ms)
 Completed 200 OK in 239ms (Views: 207.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:49:10 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (78.0ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered albums/index.html.haml within layouts/application (130.3ms)
+Completed 200 OK in 206ms (Views: 134.9ms | ActiveRecord: 1.1ms)

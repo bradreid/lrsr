@@ -1,4 +1,4 @@
-class AlbumsController < AdminController
+class AlbumsController < ApplicationController
   
   def index
     @albums = Album.order('id desc').page params[:page]
