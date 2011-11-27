@@ -1,5 +1,25 @@
 %h2
   =@album.title
 =simple_format @album.description
+public url: 
+=text_field_tag :url, "http://www.lrsr.ca#{album_path(@album)}", :size => 30
+.upload{:style => 'float:right'}
+  -form_for [:admin, @album, @album.album_pictures.build], :html => { :multipart => true }, :builder => LrsrFormBuilder  do |f|
+    =f.file_field :image    
+    =f.submit 'Add new picture'
 %h3 Pictures
 
+%br
+%br
+%table{:cellspacing => 0, :border => 0}
+  -@album.album_pictures.all.each_slice(3) do |x,y,z|
+    %tr
+      %td{:width => '280px'}
+        =link_to image_tag(x.image(:medium)), x.image.url
+        =action_images([:admin, @album, x], :exclude => [:index, :show, :edit])
+      %td{:width => '280px'}
+        =link_to image_tag(y.image(:medium)), y.image.url if y
+        =action_images([:admin, @album, y], :exclude => [:index, :show, :edit]) if y    
+      %td{:width => '280px'}
+        =link_to image_tag(z.image(:medium)), z.image.url if z
+        =action_images([:admin, @album, z], :exclude => [:index, :show, :edit]) if z

@@ -54863,3 +54863,2129 @@ Rendered shared/nav/_admin.html.haml (5.8ms)
 Rendered shared/_flashes.html.haml (59.5ms)
 Rendered admin/index.html.haml within layouts/application (102.3ms)
 Completed 200 OK in 129ms (Views: 107.2ms | ActiveRecord: 1.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 08:49:05 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (1.1ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTrailCondition Load (2.3ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.5ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.5ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (17.2ms)[0m  INSERT INTO "forcasts" ("winnipeg", "updated_at", "raw_xml", "created_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sun, 27 Nov 2011 7:58 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-20" direction="280" speed="12.87" />
+<yweather:atmosphere humidity="91" visibility="1.21" pressure="1027.8" rising="0" />
+<yweather:astronomy sunrise="7:58 am" sunset="4:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 7:58 am CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sun, 27 Nov 2011 7:58 am CST</pubDate>
+<yweather:condition text="Fog" code="20" temp="-13" date="Sun, 27 Nov 2011 7:58 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/20.gif"/><br />
+<b>Current Conditions:</b><br />
+Fog, -13 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sun - Sunny. High: -2 Low: -3<br />
+Mon - Partly Cloudy. High: 3 Low: -8<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sun" date="27 Nov 2011" low="-3" high="-2" text="Sunny" code="32" />
+<yweather:forecast day="Mon" date="28 Nov 2011" low="-8" high="3" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX0547_2011_11_28_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api13.weather.ac4.yahoo.com uncompressed/chunked Sun Nov 27 06:49:06 PST 2011 -->
+', '2011-11-27 14:49:06.813512', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sun, 27 Nov 2011 7:58 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-6" direction="320" speed="8.05" />
+<yweather:atmosphere humidity="91" visibility="" pressure="1025.8" rising="0" />
+<yweather:astronomy sunrise="7:54 am" sunset="4:26 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 7:58 am CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sun, 27 Nov 2011 7:58 am CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-3" date="Sun, 27 Nov 2011 7:58 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -3 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sun - Sunny. High: -2 Low: -3<br />
+Mon - Partly Cloudy. High: 3 Low: -8<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sun" date="27 Nov 2011" low="-3" high="-2" text="Sunny" code="32" />
+<yweather:forecast day="Mon" date="28 Nov 2011" low="-8" high="3" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX1687_2011_11_28_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api16.weather.ac4.yahoo.com uncompressed/chunked Sun Nov 27 06:49:06 PST 2011 -->
+', '2011-11-27 14:49:06.813512')
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 14:49:05')
+Rendered shared/nav/_main.html.haml (7.9ms)
+Rendered shared/_flashes.html.haml (59.6ms)
+Rendered welcome/index.html.haml within layouts/application (748.8ms)
+Completed 200 OK in 1771ms (Views: 820.8ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Nov 27 08:49:13 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.7ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Completed   in 14ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sun Nov 27 08:49:13 -0600 2011
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (1.1ms)
+Rendered shared/nav/_main.html.haml (6.9ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (99.4ms)
+Completed 200 OK in 130ms (Views: 114.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sun Nov 27 08:49:26 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓", "user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1
+Completed   in 106ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓", "user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (57.9ms)
+Rendered shared/nav/_main.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (100.3ms)
+Completed 200 OK in 194ms (Views: 105.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sun Nov 27 08:49:33 -0600 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓", "user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "remember_created_at" = '2011-11-27 14:49:33.706966', "updated_at" = '2011-11-27 14:49:33.707480' WHERE "users"."id" = 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-11-27 14:49:33.711937', "sign_in_count" = 20, "last_sign_in_at" = '2011-11-26 15:17:30.897514', "updated_at" = '2011-11-27 14:49:33.712476' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 216ms
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Nov 27 08:49:33 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (8.3ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/index.html.haml within layouts/application (326.1ms)
+Completed 200 OK in 372ms (Views: 333.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at Sun Nov 27 08:49:35 -0600 2011
+  Processing by Admin::AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/index.html.haml within layouts/application (46.9ms)
+Completed 200 OK in 205ms (Views: 73.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 08:49:39 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (60.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (98.2ms)
+Completed 200 OK in 162ms (Views: 134.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 08:51:51 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: form was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from _app_views_admin_albums_show_html_haml__490434690_2192168720_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+Rendered admin/albums/show.html.haml within layouts/application (112.7ms)
+Completed 500 Internal Server Error in 148ms
+
+ActionView::Template::Error (undefined method `file_field' for #<String:0x105b05c10>):
+    3: =simple_format @album.description
+    4: %h3 Pictures
+    5: -form_for [:admin, @album, @album.album_pictures.build], :html => { :multipart => true }, :builder => LrsrFormBuilder  do |f|
+    6:   = form.file_field :image    
+    7:   =f.submit 'Add new picture'
+  app/views/admin/albums/show.html.haml:6:in `_app_views_admin_albums_show_html_haml__490434690_2192168720_0'
+  app/views/admin/albums/show.html.haml:5:in `_app_views_admin_albums_show_html_haml__490434690_2192168720_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  [1m[35mContactRequest Load (0.1ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.5ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 08:52:01 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191502640_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (109.4ms)
+Completed 200 OK in 143ms (Views: 116.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 08:52:10 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1058c0db0 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-oqoppa-0>, @original_filename="rescue.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"rescue.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Completed 500 Internal Server Error in 69ms
+
+RuntimeError (create):
+  app/controllers/admin/albums/album_pictures_controller.rb:4:in `create'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[35mContactRequest Load (0.1ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 08:54:15 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x105519f18 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-1cvq51o-0>, @original_filename="rescue.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"rescue.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 357ms
+
+NoMethodError (undefined method `save' for #<Array:0x105994278>):
+  app/controllers/admin/albums/album_pictures_controller.rb:6:in `create'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.7ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 08:54:49 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1054c5e68 @content_type="image/gif", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-es76zf-0>, @original_filename="handSignals_stop.gif", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"handSignals_stop.gif\"\r\nContent-Type: image/gif\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 209ms
+
+RuntimeError ([#<AlbumPicture id: nil, title: nil, album_id: 1, image_file_name: "handSignals_stop.gif", image_content_type: "image/gif", image_file_size: 1829, created_at: nil, updated_at: nil>]):
+  app/controllers/admin/albums/album_pictures_controller.rb:6:in `create'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  [1m[35mContactRequest Load (0.2ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 08:55:19 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x105449b88 @content_type="image/gif", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-1177wt8-0>, @original_filename="handSignals_stop.gif", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"handSignals_stop.gif\"\r\nContent-Type: image/gif\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "album_pictures" ("album_id", "title", "image_content_type", "updated_at", "created_at", "image_file_size", "image_file_name") VALUES (1, NULL, 'image/gif', '2011-11-27 14:55:19.470442', '2011-11-27 14:55:19.470442', 1829, 'handSignals_stop.gif')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /medium/handSignals_stop.gif
+[paperclip] saving /original/handSignals_stop.gif
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 885ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 08:55:20 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192730440_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/albums/show.html.haml within layouts/application (139.7ms)
+Completed 200 OK in 177ms (Views: 147.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:05:49 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194988500_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered admin/albums/show.html.haml within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 116ms
+
+ActionView::Template::Error (undefined method `image' for #<Array:0x105822070>):
+    10: %br
+    11: %br
+    12: -@album.album_pictures.each_slice(3) do |x,y,z|
+    13:   =image_tag(x.image(:medium))
+    14:   =image_tag(y.image(:medium))
+    15:   =image_tag(z.image(:medium))  
+    16:   %br
+  app/views/admin/albums/show.html.haml:13:in `_app_views_admin_albums_show_html_haml__490434690_2194988500_0'
+  app/views/admin/albums/show.html.haml:12:in `_app_views_admin_albums_show_html_haml__490434690_2194988500_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.5ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.1ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:06:07 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194008160_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered admin/albums/show.html.haml within layouts/application (23.2ms)
+Completed 500 Internal Server Error in 117ms
+
+ActionView::Template::Error ([#<AlbumPicture id: 1, title: nil, album_id: 1, image_file_name: "handSignals_stop.gif", image_content_type: "image/gif", image_file_size: 1829, created_at: "2011-11-27 14:55:19", updated_at: "2011-11-27 14:55:19">, #<AlbumPicture id: nil, title: nil, album_id: 1, image_file_name: nil, image_content_type: nil, image_file_size: nil, created_at: nil, updated_at: nil>]):
+    10: %br
+    11: %br
+    12: -@album.album_pictures.each_slice(3) do |x,y,z|
+    13:   -raise x.inspect
+    14:   =image_tag(x.image(:medium))
+    15:   =image_tag(y.image(:medium))
+    16:   =image_tag(z.image(:medium))  
+  app/views/admin/albums/show.html.haml:13:in `_app_views_admin_albums_show_html_haml__490434690_2194008160_0'
+  app/views/admin/albums/show.html.haml:12:in `_app_views_admin_albums_show_html_haml__490434690_2194008160_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:06:51 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192802760_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered admin/albums/show.html.haml within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (nil):
+    10: %br
+    11: %br
+    12: -@album.album_pictures.each_slice(3) do |x,y,z|
+    13:   -raise y.inspect
+    14:   =image_tag(x.image(:medium))
+    15:   =image_tag(y.image(:medium))
+    16:   =image_tag(z.image(:medium))  
+  app/views/admin/albums/show.html.haml:13:in `_app_views_admin_albums_show_html_haml__490434690_2192802760_0'
+  app/views/admin/albums/show.html.haml:12:in `_app_views_admin_albums_show_html_haml__490434690_2192802760_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mContactRequest Load (0.2ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.7ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:07:02 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191758700_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered admin/albums/show.html.haml within layouts/application (75.6ms)
+Completed 500 Internal Server Error in 111ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    11: %br
+    12: -@album.album_pictures.each_slice(3) do |x,y,z|
+    13:   =image_tag(x.first.image(:medium))
+    14:   =image_tag(y.image(:medium))
+    15:   =image_tag(z.image(:medium))  
+    16:   %br
+    17:   %br
+  app/views/admin/albums/show.html.haml:14:in `_app_views_admin_albums_show_html_haml__490434690_2191758700_0'
+  app/views/admin/albums/show.html.haml:12:in `_app_views_admin_albums_show_html_haml__490434690_2191758700_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:07:19 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195210740_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (55.0ms)
+Completed 200 OK in 153ms (Views: 62.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:07:26 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1057cbf18 @content_type="image/gif", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-wzwjn2-0>, @original_filename="handSignals_left.gif", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"handSignals_left.gif\"\r\nContent-Type: image/gif\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "album_pictures" ("album_id", "title", "image_content_type", "updated_at", "image_file_size", "created_at", "image_file_name") VALUES (1, NULL, 'image/gif', '2011-11-27 15:07:26.330926', 2170, '2011-11-27 15:07:26.330926', 'handSignals_left.gif')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /medium/handSignals_left.gif
+[paperclip] saving /original/handSignals_left.gif
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1112ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:07:27 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192493220_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered admin/albums/show.html.haml within layouts/application (144.8ms)
+Completed 200 OK in 183ms (Views: 152.5ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:07:35 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x105ab5850 @content_type="image/gif", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-152fqj-0>, @original_filename="handSignals_slowing.gif", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"handSignals_slowing.gif\"\r\nContent-Type: image/gif\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "album_pictures" ("image_content_type", "album_id", "updated_at", "image_file_name", "title", "created_at", "image_file_size") VALUES ('image/gif', 1, '2011-11-27 15:07:35.796599', 'handSignals_slowing.gif', NULL, '2011-11-27 15:07:35.796599', 2342)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /medium/handSignals_slowing.gif
+[paperclip] saving /original/handSignals_slowing.gif
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 676ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:07:36 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192025800_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (142.4ms)
+Completed 200 OK in 180ms (Views: 150.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at Sun Nov 27 09:07:36 -0600 2011
+
+ActionController::RoutingError (No route matches "/images/medium/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+  [1m[36mAlbum Load (0.5ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY albums.id DESC LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/album_picture.rb:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:09:17 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193220980_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered admin/albums/show.html.haml within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionView::Template::Error (undefined method `first' for #<AlbumPicture:0x1054e1fc8>):
+    10: %br
+    11: %br
+    12: -@album.album_pictures.all.each_slice(3) do |x,y,z|
+    13:   =image_tag(x.first.image(:medium))
+    14:   =image_tag(y.image(:medium)) if y
+    15:   =image_tag(z.image(:medium)) if z
+    16:   %br
+  app/views/admin/albums/show.html.haml:13:in `_app_views_admin_albums_show_html_haml__490434690_2193220980_0'
+  app/views/admin/albums/show.html.haml:12:in `each'
+  app/views/admin/albums/show.html.haml:12:in `each_slice'
+  app/views/admin/albums/show.html.haml:12:in `_app_views_admin_albums_show_html_haml__490434690_2193220980_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[35mContactRequest Load (0.1ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (66.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (71.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:09:28 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192194940_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (114.4ms)
+Completed 200 OK in 149ms (Views: 121.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:09:38 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x10598fa20 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-1pljd0h-0>, @original_filename="header_short.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"header_short.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "album_pictures" ("image_file_name", "image_content_type", "title", "created_at", "image_file_size", "updated_at", "album_id") VALUES ('header_short.jpg', 'image/jpeg', NULL, '2011-11-27 15:09:38.183807', 26640, '2011-11-27 15:09:38.183807', 1)
+[paperclip] Saving attachments.
+[paperclip] saving /medium/header_short.jpg
+[paperclip] saving /original/header_short.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1466ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:09:39 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193557460_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (114.5ms)
+Completed 200 OK in 150ms (Views: 121.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:09:47 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1055778e8 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-sv56jg-0>, @original_filename="rescue.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"rescue.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "album_pictures" ("image_file_size", "created_at", "title", "image_content_type", "updated_at", "album_id", "image_file_name") VALUES (68469, '2011-11-27 15:09:47.828432', NULL, 'image/jpeg', '2011-11-27 15:09:47.828432', 1, 'rescue.jpg')
+[paperclip] Saving attachments.
+[paperclip] saving /medium/rescue.jpg
+[paperclip] saving /original/rescue.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 2156ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:09:49 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193321400_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (112.1ms)
+Completed 200 OK in 149ms (Views: 119.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:10:41 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194993820_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (60.5ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/albums/show.html.haml within layouts/application (114.6ms)
+Completed 200 OK in 214ms (Views: 122.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:11:15 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193066520_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (118.7ms)
+Completed 200 OK in 154ms (Views: 125.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:13:46 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193028440_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (111.0ms)
+Completed 200 OK in 147ms (Views: 118.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:14:42 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194372160_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.2ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (118.6ms)
+Completed 200 OK in 208ms (Views: 125.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures/1" for 127.0.0.1 at Sun Nov 27 09:14:46 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 1 LIMIT 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /original/handSignals_stop.gif
+[paperclip] deleting /medium/handSignals_stop.gif
+  [1m[35mAREL (0.6ms)[0m  DELETE FROM "album_pictures" WHERE "album_pictures"."id" = 1
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1035ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:14:47 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193856420_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (114.4ms)
+Completed 200 OK in 149ms (Views: 121.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:15:01 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195320280_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (120.0ms)
+Completed 200 OK in 217ms (Views: 127.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:15:42 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193918480_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (117.5ms)
+Completed 200 OK in 210ms (Views: 124.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:16:06 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193032460_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (116.3ms)
+Completed 200 OK in 153ms (Views: 123.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:16:26 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194920820_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (61.2ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (120.0ms)
+Completed 200 OK in 211ms (Views: 127.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/admin/albums/1/album_pictures/5" for 127.0.0.1 at Sun Nov 27 09:16:55 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"5"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 5 LIMIT 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /original/rescue.jpg
+[paperclip] deleting /medium/rescue.jpg
+  [1m[35mAREL (0.4ms)[0m  DELETE FROM "album_pictures" WHERE "album_pictures"."id" = 5
+Redirected to http://localhost:3000/admin/albums/5
+Completed 302 Found in 999ms
+
+
+Started GET "/admin/albums/5" for 127.0.0.1 at Sun Nov 27 09:16:56 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 5 LIMIT 1
+Completed 404 Not Found in 85ms
+
+ActiveRecord::RecordNotFound (Couldn't find Album with ID=5):
+  app/controllers/admin/albums_controller.rb:22:in `show'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.1ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:17:38 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195070440_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (59.1ms)
+Rendered admin/albums/show.html.haml within layouts/application (120.5ms)
+Completed 200 OK in 212ms (Views: 127.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures/4" for 127.0.0.1 at Sun Nov 27 09:17:41 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"4"}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 4 AND ("album_pictures".album_id = 1) LIMIT 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /original/header_short.jpg
+[paperclip] deleting /medium/header_short.jpg
+  [1m[35mAREL (0.3ms)[0m  DELETE FROM "album_pictures" WHERE "album_pictures"."id" = 4
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 606ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:17:42 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193917600_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (114.8ms)
+Completed 200 OK in 216ms (Views: 122.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/admin/albums/1/album_pictures/3" for 127.0.0.1 at Sun Nov 27 09:17:45 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"3"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 3 AND ("album_pictures".album_id = 1) LIMIT 1
+[paperclip] Deleting attachments.
+[paperclip] deleting /original/handSignals_slowing.gif
+[paperclip] deleting /medium/handSignals_slowing.gif
+  [1m[36mAREL (0.5ms)[0m  [1mDELETE FROM "album_pictures" WHERE "album_pictures"."id" = 3[0m
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 650ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:17:46 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191708220_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (126.6ms)
+Completed 200 OK in 164ms (Views: 134.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/admin/albums/1/album_pictures/2" for 127.0.0.1 at Sun Nov 27 09:17:48 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"2"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 2 AND ("album_pictures".album_id = 1) LIMIT 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /original/handSignals_left.gif
+[paperclip] deleting /medium/handSignals_left.gif
+  [1m[35mAREL (0.6ms)[0m  DELETE FROM "album_pictures" WHERE "album_pictures"."id" = 2
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 588ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:17:49 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194199780_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (59.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (108.6ms)
+Completed 200 OK in 206ms (Views: 115.9ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:17:56 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1057776c0 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-okduqs-0>, @original_filename="groomer.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"groomer.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "album_pictures" ("created_at", "album_id", "updated_at", "image_file_size", "image_file_name", "image_content_type", "title") VALUES ('2011-11-27 15:17:56.355594', 1, '2011-11-27 15:17:56.355594', 31246, 'groomer.jpg', 'image/jpeg', NULL)
+[paperclip] Saving attachments.
+[paperclip] saving /medium/groomer.jpg
+[paperclip] saving /original/groomer.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1466ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:17:57 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.7ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194254780_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (63.5ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (119.1ms)
+Completed 200 OK in 270ms (Views: 126.9ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:18:00 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "album_pictures" ("album_id", "created_at", "image_content_type", "updated_at", "title", "image_file_size", "image_file_name") VALUES (1, '2011-11-27 15:18:00.328960', NULL, '2011-11-27 15:18:00.328960', NULL, NULL, NULL)
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 104ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:00 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191973700_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (126.8ms)
+Completed 200 OK in 167ms (Views: 134.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at Sun Nov 27 09:18:00 -0600 2011
+
+ActionController::RoutingError (No route matches "/images/medium/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:18:08 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1054aed08 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-1hxp6f0-0>, @original_filename="rescue.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"rescue.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "album_pictures" ("updated_at", "image_file_name", "created_at", "image_content_type", "title", "album_id", "image_file_size") VALUES ('2011-11-27 15:18:08.729997', 'rescue.jpg', '2011-11-27 15:18:08.729997', 'image/jpeg', NULL, 1, 68469)
+[paperclip] Saving attachments.
+[paperclip] saving /medium/rescue.jpg
+[paperclip] saving /original/rescue.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1972ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:10 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192621760_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (123.8ms)
+Completed 200 OK in 162ms (Views: 131.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at Sun Nov 27 09:18:10 -0600 2011
+
+ActionController::RoutingError (No route matches "/images/medium/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/admin/albums/1/album_pictures/7" for 127.0.0.1 at Sun Nov 27 09:18:15 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"7"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 7 AND ("album_pictures".album_id = 1) LIMIT 1
+[paperclip] Deleting attachments.
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "album_pictures" WHERE "album_pictures"."id" = 7[0m
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 47ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:16 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194065980_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (115.5ms)
+Completed 200 OK in 211ms (Views: 122.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:18:23 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAREL (231.3ms)[0m  [1mINSERT INTO "album_pictures" ("created_at", "image_content_type", "updated_at", "album_id", "image_file_size", "title", "image_file_name") VALUES ('2011-11-27 15:18:23.173337', NULL, '2011-11-27 15:18:23.173337', 1, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 444ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:23 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191884120_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.5ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered admin/albums/show.html.haml within layouts/application (122.9ms)
+Completed 200 OK in 157ms (Views: 129.7ms | ActiveRecord: 233.3ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at Sun Nov 27 09:18:24 -0600 2011
+
+ActionController::RoutingError (No route matches "/images/medium/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/admin/albums/1/album_pictures/9" for 127.0.0.1 at Sun Nov 27 09:18:28 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"9"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 9 AND ("album_pictures".album_id = 1) LIMIT 1[0m
+[paperclip] Deleting attachments.
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "album_pictures" WHERE "album_pictures"."id" = 9
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 108ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:29 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194970960_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (61.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (117.8ms)
+Completed 200 OK in 213ms (Views: 125.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:18:47 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "album_pictures" ("image_file_size", "image_content_type", "created_at", "image_file_name", "title", "updated_at", "album_id") VALUES (NULL, NULL, '2011-11-27 15:18:47.157192', NULL, NULL, '2011-11-27 15:18:47.157192', 1)
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 46ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:47 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193379640_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (116.4ms)
+Completed 200 OK in 152ms (Views: 123.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at Sun Nov 27 09:18:47 -0600 2011
+
+ActionController::RoutingError (No route matches "/images/medium/missing.png"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/admin/albums/1/album_pictures/10" for 127.0.0.1 at Sun Nov 27 09:18:50 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#destroy as HTML
+  Parameters: {"album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "id"=>"10"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE "album_pictures"."id" = 10 AND ("album_pictures".album_id = 1) LIMIT 1
+[paperclip] Deleting attachments.
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "album_pictures" WHERE "album_pictures"."id" = 10[0m
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 109ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:18:50 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195378120_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.5ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (64.4ms)
+Completed 200 OK in 158ms (Views: 129.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:19:11 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 52ms
+
+ActionView::MissingTemplate (Missing template admin/albums/album_pictures/show with {:formats=>[:html], :handlers=>[:rxml, :builder, :erb, :haml, :rjs, :rhtml], :locale=>[:en, :en]} in view paths "/Users/breid/code/lrsr/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/kaminari-0.12.4/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.4.0/app/views"):
+  app/controllers/admin/albums/album_pictures_controller.rb:10:in `create'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:19:33 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2192235100_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (105.4ms)
+Completed 200 OK in 156ms (Views: 112.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:19:37 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193907400_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:5)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (59.3ms)
+Rendered admin/albums/show.html.haml within layouts/application (104.2ms)
+Completed 200 OK in 213ms (Views: 111.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Nov 27 09:20:26 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered admin/index.html.haml within layouts/application (112.3ms)
+Completed 200 OK in 140ms (Views: 117.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at Sun Nov 27 09:20:27 -0600 2011
+  Processing by Admin::AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+Rendered shared/nav/_admin.html.haml (5.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/index.html.haml within layouts/application (43.8ms)
+Completed 200 OK in 141ms (Views: 112.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:20:29 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194129700_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/albums/show.html.haml within layouts/application (114.6ms)
+Completed 200 OK in 212ms (Views: 121.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:20:35 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194483540_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.5ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (48.1ms)
+Completed 200 OK in 154ms (Views: 55.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:20:42 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x1059a0e38 @content_type="image/gif", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-ctalno-0>, @original_filename="handSignals_stop.gif", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"handSignals_stop.gif\"\r\nContent-Type: image/gif\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "album_pictures" ("image_file_name", "updated_at", "image_content_type", "album_id", "created_at", "title", "image_file_size") VALUES ('handSignals_stop.gif', '2011-11-27 15:20:42.764478', 'image/gif', 1, '2011-11-27 15:20:42.764478', NULL, 1829)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /medium/handSignals_stop.gif
+[paperclip] saving /original/handSignals_stop.gif
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1058ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:20:43 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195249460_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (125.8ms)
+Completed 200 OK in 231ms (Views: 133.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:20:50 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x10583dc58 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-7lqjnb-0>, @original_filename="header_short.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"header_short.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "album_pictures" ("updated_at", "image_file_name", "image_file_size", "image_content_type", "album_id", "title", "created_at") VALUES ('2011-11-27 15:20:50.417437', 'header_short.jpg', 26640, 'image/jpeg', 1, NULL, '2011-11-27 15:20:50.417437')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /medium/header_short.jpg
+[paperclip] saving /original/header_short.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1044ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:20:51 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194915400_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (62.6ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered admin/albums/show.html.haml within layouts/application (124.9ms)
+Completed 200 OK in 221ms (Views: 132.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:21:04 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191962560_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (126.7ms)
+Completed 200 OK in 162ms (Views: 134.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:21:17 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194386140_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (61.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/albums/show.html.haml within layouts/application (120.8ms)
+Completed 200 OK in 210ms (Views: 127.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:21:25 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193038500_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (118.8ms)
+Completed 200 OK in 155ms (Views: 125.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:21:43 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195370020_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (121.0ms)
+Completed 200 OK in 206ms (Views: 177.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:21:55 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193825240_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (119.7ms)
+Completed 200 OK in 157ms (Views: 127.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:22:34 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x105974c20 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-1sxb55u-0>, @original_filename="pastarchives.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"pastarchives.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "album_pictures" ("title", "image_file_name", "album_id", "updated_at", "image_file_size", "image_content_type", "created_at") VALUES (NULL, 'pastarchives.jpg', 1, '2011-11-27 15:22:34.609714', 5446, 'image/jpeg', '2011-11-27 15:22:34.609714')
+[paperclip] Saving attachments.
+[paperclip] saving /medium/pastarchives.jpg
+[paperclip] saving /original/pastarchives.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1274ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:22:35 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194469240_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (62.0ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (126.4ms)
+Completed 200 OK in 270ms (Views: 133.6ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/admin/albums/1/album_pictures" for 127.0.0.1 at Sun Nov 27 09:22:47 -0600 2011
+  Processing by Admin::Albums::AlbumPicturesController#create as HTML
+  Parameters: {"commit"=>"Add new picture", "album_id"=>"1", "album_picture"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x105737a20 @content_type="image/jpeg", @tempfile=#<File:/var/folders/8c/8cYxtEOWG78cQNzC6Dngrk+++TI/-Tmp-/RackMultipart20111127-6162-ba41z9-0>, @original_filename="toboggan.jpg", @headers="Content-Disposition: form-data; name=\"album_picture[image]\"; filename=\"toboggan.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "authenticity_token"=>"7AeX///o60mSRAVL3UUeVKmB3FzibK1vLjKkN5xPk8k=", "utf8"=>"✓"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "album_pictures" ("image_file_size", "image_content_type", "updated_at", "image_file_name", "title", "album_id", "created_at") VALUES (15902, 'image/jpeg', '2011-11-27 15:22:47.290386', 'toboggan.jpg', NULL, 1, '2011-11-27 15:22:47.290386')
+[paperclip] Saving attachments.
+[paperclip] saving /medium/toboggan.jpg
+[paperclip] saving /original/toboggan.jpg
+Redirected to http://localhost:3000/admin/albums/1
+Completed 302 Found in 1042ms
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:22:48 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194125000_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (126.6ms)
+Completed 200 OK in 247ms (Views: 133.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:23:34 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2191595640_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:6)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered admin/albums/show.html.haml within layouts/application (189.2ms)
+Completed 200 OK in 224ms (Views: 196.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:24:20 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "forcasts" ("updated_at", "raw_xml", "winnipeg", "created_at") VALUES ('2011-11-27 15:24:21.626096', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sun, 27 Nov 2011 7:58 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-6" direction="320" speed="8.05" />
+<yweather:atmosphere humidity="91" visibility="" pressure="1025.8" rising="0" />
+<yweather:astronomy sunrise="7:54 am" sunset="4:26 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 7:58 am CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sun, 27 Nov 2011 7:58 am CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-3" date="Sun, 27 Nov 2011 7:58 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -3 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sun - Mostly Sunny. High: -2 Low: -3<br />
+Mon - Mostly Sunny. High: 3 Low: -8<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sun" date="27 Nov 2011" low="-3" high="-2" text="Mostly Sunny" code="34" />
+<yweather:forecast day="Mon" date="28 Nov 2011" low="-8" high="3" text="Mostly Sunny" code="34" />
+<guid isPermaLink="false">CAXX1687_2011_11_28_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api14.weather.ac4.yahoo.com uncompressed/chunked Sun Nov 27 07:24:21 PST 2011 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sun, 27 Nov 2011 7:58 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-20" direction="280" speed="12.87" />
+<yweather:atmosphere humidity="91" visibility="1.21" pressure="1027.8" rising="0" />
+<yweather:astronomy sunrise="7:58 am" sunset="4:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 7:58 am CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sun, 27 Nov 2011 7:58 am CST</pubDate>
+<yweather:condition text="Fog" code="20" temp="-13" date="Sun, 27 Nov 2011 7:58 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/20.gif"/><br />
+<b>Current Conditions:</b><br />
+Fog, -13 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sun - Sunny. High: -2 Low: -3<br />
+Mon - Partly Cloudy. High: 3 Low: -8<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sun" date="27 Nov 2011" low="-3" high="-2" text="Sunny" code="32" />
+<yweather:forecast day="Mon" date="28 Nov 2011" low="-8" high="3" text="Partly Cloudy" code="30" />
+<guid isPermaLink="false">CAXX0547_2011_11_28_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api6.weather.ac4.yahoo.com uncompressed/chunked Sun Nov 27 07:24:21 PST 2011 -->
+', '2011-11-27 15:24:21.626096')[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:24:20')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (21.0ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (141.3ms)
+Completed 200 OK in 851ms (Views: 147.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sun Nov 27 09:24:55 -0600 2011
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+Rendered shared/nav/_admin.html.haml (60.4ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered admin/index.html.haml within layouts/application (101.1ms)
+Completed 200 OK in 128ms (Views: 106.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at Sun Nov 27 09:24:57 -0600 2011
+  Processing by Admin::AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+Rendered shared/nav/_admin.html.haml (6.4ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/index.html.haml within layouts/application (104.4ms)
+Completed 200 OK in 141ms (Views: 112.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at Sun Nov 27 09:25:06 -0600 2011
+  Processing by Admin::AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/albums/index.html.haml within layouts/application (44.2ms)
+Completed 200 OK in 141ms (Views: 51.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:25:09 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+  [1m[36mContactRequest Load (0.5ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered admin/albums/show.html.haml within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 111ms
+
+ActionView::Template::Error (undefined local variable or method `albums_path' for #<#<Class:0x105960658>:0x10595dcc8>):
+    1: %h2
+    2:   =@album.title
+    3: =text_field :url, albums_path
+    4: =simple_format @album.description
+    5: %h3 Pictures
+    6: .upload{:style => 'float:right'}
+  app/views/admin/albums/show.html.haml:3:in `_app_views_admin_albums_show_html_haml__490434690_2194321580_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (52.0ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (67.8ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:25:22 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195363760_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (60.4ms)
+Rendered admin/albums/show.html.haml within layouts/application (127.8ms)
+Completed 200 OK in 224ms (Views: 201.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:25:44 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+Rendered admin/albums/show.html.haml within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (can't convert Symbol into String):
+    1: %h2
+    2:   =@album.title
+    3: =text_field :url, albums_path, albums_path
+    4: =simple_format @album.description
+    5: %h3 Pictures
+    6: .upload{:style => 'float:right'}
+  app/views/admin/albums/show.html.haml:3:in `_app_views_admin_albums_show_html_haml__490434690_2193919920_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mContactRequest Load (0.3ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.2ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:25:52 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194299880_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (126.3ms)
+Completed 200 OK in 162ms (Views: 133.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:33:08 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193545680_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/albums/show.html.haml within layouts/application (123.2ms)
+Completed 200 OK in 159ms (Views: 130.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:33:56 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194988100_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:8)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (62.6ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/albums/show.html.haml within layouts/application (127.3ms)
+Completed 200 OK in 212ms (Views: 134.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:34:13 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193143140_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:8)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (2.6ms)
+Rendered admin/albums/show.html.haml within layouts/application (124.8ms)
+Completed 200 OK in 160ms (Views: 131.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:34:28 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193519020_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (178.6ms)
+Completed 200 OK in 214ms (Views: 186.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:34:44 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2194290640_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered admin/albums/show.html.haml within layouts/application (122.4ms)
+Completed 200 OK in 219ms (Views: 129.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:34:54 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193555500_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/albums/show.html.haml within layouts/application (122.3ms)
+Completed 200 OK in 158ms (Views: 129.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:35:02 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2195044020_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[36mAlbumPicture Load (0.3ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)[0m
+Rendered shared/nav/_admin.html.haml (62.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered admin/albums/show.html.haml within layouts/application (127.1ms)
+Completed 200 OK in 218ms (Views: 134.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/albums/1" for 127.0.0.1 at Sun Nov 27 09:35:19 -0600 2011
+  Processing by Admin::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: - style block helpers are deprecated. Please use =. (called from _app_views_admin_albums_show_html_haml__490434690_2193601520_0 at /Users/breid/code/lrsr/app/views/admin/albums/show.html.haml:7)
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.7ms)
+Rendered shared/_flashes.html.haml (2.5ms)
+Rendered admin/albums/show.html.haml within layouts/application (120.2ms)
+Completed 200 OK in 155ms (Views: 127.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:35:28 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:35:28')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (78.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (189.7ms)
+Completed 200 OK in 226ms (Views: 194.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:38:20 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.3ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:38:20')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (88.9ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (207.9ms)
+Completed 200 OK in 247ms (Views: 212.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:38:23 -0600 2011
+
+ActionController::RoutingError (uninitialized constant AlbumsController):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:39:43 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:39:43')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (20.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (198.4ms)
+Completed 200 OK in 235ms (Views: 203.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:39:46 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Completed 500 Internal Server Error in 93ms
+
+ActionView::MissingTemplate (Missing template albums/index with {:formats=>[:html], :handlers=>[:rxml, :builder, :erb, :haml, :rjs, :rhtml], :locale=>[:en, :en]} in view paths "/Users/breid/code/lrsr/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/kaminari-0.12.4/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.4.0/app/views"):
+  
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:41:21 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+Rendered albums/index.html.haml within layouts/application (66.3ms)
+Completed 500 Internal Server Error in 101ms
+
+ActionView::Template::Error (undefined method `albums_images' for #<Album:0x105b10d40>):
+    15:     -@albums.each do |a|
+    16:       %tr
+    17:         %td
+    18:           =image_tag a.albums_images.first.image(:medium)
+    19:         %td
+    20:           =a.title
+    21:         %td
+  app/views/albums/index.html.haml:18:in `_app_views_albums_index_html_haml___1296467073_2191896340_0'
+  app/views/albums/index.html.haml:15:in `_app_views_albums_index_html_haml___1296467073_2191896340_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[36mContactRequest Load (0.1ms)[0m  [1mSELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.5ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:41:28 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+Rendered albums/index.html.haml within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined method `album_images' for #<Album:0x1054bb828>):
+    15:     -@albums.each do |a|
+    16:       %tr
+    17:         %td
+    18:           =image_tag a.album_images.first.image(:medium)
+    19:         %td
+    20:           =a.title
+    21:         %td
+  app/views/albums/index.html.haml:18:in `_app_views_albums_index_html_haml___1296467073_2192038640_0'
+  app/views/albums/index.html.haml:15:in `_app_views_albums_index_html_haml___1296467073_2192038640_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[35mContactRequest Load (0.1ms)[0m  SELECT "contact_requests".* FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:41:40 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (6.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered albums/index.html.haml within layouts/application (107.4ms)
+Completed 200 OK in 141ms (Views: 114.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:41:51 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+Rendered shared/nav/_admin.html.haml (6.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered albums/index.html.haml within layouts/application (104.5ms)
+Completed 200 OK in 140ms (Views: 112.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:42:39 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (6.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered albums/index.html.haml within layouts/application (101.5ms)
+Completed 200 OK in 135ms (Views: 108.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/albums/1" for 127.0.0.1 at Sun Nov 27 09:42:42 -0600 2011
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (5.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered albums/show.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 124ms (Views: 41.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/albums/1" for 127.0.0.1 at Sun Nov 27 09:43:20 -0600 2011
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 1 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1)
+Rendered shared/nav/_admin.html.haml (5.9ms)
+Rendered shared/_flashes.html.haml (61.4ms)
+Rendered albums/show.html.haml within layouts/application (116.3ms)
+Completed 200 OK in 213ms (Views: 123.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sun Nov 27 09:43:36 -0600 2011
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (61.1ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered albums/index.html.haml within layouts/application (107.6ms)
+Completed 200 OK in 143ms (Views: 114.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:45:00 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:45:00')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (79.6ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (205.8ms)
+Completed 200 OK in 243ms (Views: 210.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:45:50 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:45:50')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (79.7ms)
+Rendered shared/_flashes.html.haml (3.3ms)
+Rendered welcome/index.html.haml within layouts/application (202.0ms)
+Completed 200 OK in 239ms (Views: 207.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:46:09 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:46:09')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (20.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (139.1ms)
+Completed 200 OK in 176ms (Views: 143.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:46:12 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:46:12')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (20.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (143.1ms)
+Completed 200 OK in 236ms (Views: 147.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 09:46:20 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 15:46:20')[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered shared/nav/_main.html.haml (80.3ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (203.0ms)
+Completed 200 OK in 239ms (Views: 207.1ms | ActiveRecord: 1.5ms)

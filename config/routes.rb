@@ -8,7 +8,11 @@ Lrsr::Application.routes.draw do
     resources :trail_conditions
     resources :sponsors
     resources :contact_request_emails
-    resources :albums
+    resources :albums do
+      scope :module => 'albums' do
+        resources :album_pictures
+      end      
+    end
     resources :contact_requests do
       collection do
         get 'received'
@@ -16,6 +20,7 @@ Lrsr::Application.routes.draw do
     end
   end
   resources :admin   
+  resources :albums
   resources :events
   resources :articles
   resources :trail_conditions

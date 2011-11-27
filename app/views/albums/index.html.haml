@@ -1,0 +1,22 @@
+%h2
+  Photo Albums
+
+%br
+%br
+%table.data
+  %thead
+    %tr
+      %th
+      %th
+        Title
+      %th
+        Description
+  %tbody
+    -@albums.each do |a|
+      %tr
+        %td
+          =link_to(image_tag(a.album_pictures.first.image(:medium), :width => 100), album_path(a))
+        %td
+          =link_to a.title, album_path(a)
+        %td
+          =link_to a.description, album_path(a)
