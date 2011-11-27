@@ -57147,3 +57147,20 @@ Rendered shared/nav/_main.html.haml (81.9ms)
 Rendered shared/_flashes.html.haml (3.2ms)
 Rendered welcome/index.html.haml within layouts/application (211.8ms)
 Completed 200 OK in 880ms (Views: 218.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Nov 27 10:01:42 -0600 2011
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2011-11-27 16:01:42')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (78.1ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (205.0ms)
+Completed 200 OK in 241ms (Views: 209.5ms | ActiveRecord: 1.4ms)
