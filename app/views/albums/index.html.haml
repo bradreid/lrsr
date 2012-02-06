@@ -15,7 +15,7 @@
     -@albums.each do |a|
       %tr
         %td
-          =link_to(image_tag(a.album_pictures.first.image(:medium), :width => 100), album_path(a))
+          =link_to(image_tag(a.album_pictures.first.try(:image,:medium), :width => 100), album_path(a)) if a.album_pictures.first.try(:image,:medium)
         %td
           =link_to a.title, album_path(a)
         %td
