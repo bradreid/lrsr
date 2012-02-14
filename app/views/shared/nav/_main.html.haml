@@ -18,4 +18,4 @@
           -else
             -logout_path = nil
             -home_link = link_to('Home', root_path)        
-          = [home_link, link_to('Memberships', memberships_path), link_to('Map', 'maps/lrsr-map.pdf'), link_to('Pictures', albums_path), link_to('Contact Us', new_contact_request_path), logout_path].compact.join(' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;').html_safe
+          = [home_link, link_to('Memberships', memberships_path), link_to('Map', '/maps/lrsr-map.pdf'), link_to('Pictures', albums_path), link_to('Contact Us', new_contact_request_path), logout_path].compact.join(' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;').html_safe
