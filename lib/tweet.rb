@@ -14,7 +14,7 @@ class Tweet
   def tweet(message)
     begin
       client.update(message)    
-    # rescue  
+    rescue  
     end
   end
   
