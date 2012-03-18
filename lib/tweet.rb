@@ -89,7 +89,14 @@ class Tweet
           config.oauth_token = '334339929-upCHETgfvtQVfBvbDcWsmwJwBfycFKhCrtCBfCjR'
           config.oauth_token_secret = 'c8KOrHpkEUz1tmDfN0xSD3FjBntCFh7DFOvOLctkcMs'
         end        
-      end
+      elsif @username == 'lrsrclub'
+        Twitter.configure do |config|
+          config.consumer_key = 'LxfI2yqXM8bQ7hTV4Lpgtw'
+          config.consumer_secret = 'ika7XoqUm2ytFXwhXq4WQxTntLxJObsSymdC7xaPc0'
+          config.oauth_token = '324607865-xODwDWY3Ld1tayzsuavh7HobRbQNhAaBhlNr03DQ'
+          config.oauth_token_secret = 'NV6YzPJTMy1u3L7b1mRVW0rxxonp4N3XkfU8zuLzgJo'
+        end        
+      end  
       @twitter_client ||= Twitter::Client.new    
     # rescue
     end
