@@ -6,5 +6,6 @@ class WelcomeController < ApplicationController
     @trail_condition = TrailCondition.club_trails
     @newsletter = Newsletter.last
     @weather = Forcast.latest
+    @tweets = TwitterFeed.new_if_needed
   end
 end
