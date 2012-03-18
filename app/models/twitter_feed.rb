@@ -7,8 +7,8 @@ class TwitterFeed < ActiveRecord::Base
   def self.next_tweet
     events_today = Event.all(:conditions => ["shared_before is NULL and start <= ? AND start >= ?", Time.now + 5.hours, Time.now.beginning_of_day])
     events_today.first.without_timestamps(Article,Event, TrailCondition) do
-      events_today.first.update_attribute(:shared_before, Time.now) if events_today.any?
-    end
+      events_today.first.update_attribute(:shared_before, Time.now) 
+    end if events_today.any?
     new_articles = Article.all(:conditions => {:shared => nil}, :order => 'id asc')
     new_events = Event.all(:conditions => {:shared => nil}, :order => 'id asc')
     new_trail_conditions = TrailCondition.all(:conditions => {:shared => nil}, :order => 'id asc')        
