@@ -30,6 +30,25 @@ class Tweet
     client.user_timeline
   end
   
+  def about_me
+    a = client.activity_about_me
+    a.map do |t|
+      case t.class.name
+        when "Twitter::Reply" then t.target_objects
+        when 'Twitter::Mention' then t.target_objects
+        when 'Twitter::Follow' then nil
+        when 'Twitter::Retweet' then t.target_objects
+        else raise "test"
+      end
+    end.compact.flatten
+  end
+  
+  def everything
+    all = self.messages + self.about_me
+    all = all.inject({}){|s,v| s.merge!(v.id => v)}.values
+    all.sort!{|x,y| y.created_at <=> x.created_at}    
+  end
+  
   def destroy_messages
     begin
       self.messages.each do |m|
