@@ -6,8 +6,6 @@ class TrailCondition < ActiveRecord::Base
   
   before_create :set_current_user
   
-  after_save :clear_shared_flag
-  
   STATUSES = ['closed', 'open', 'use with caution']
   
   def self.club_trails
@@ -29,9 +27,5 @@ private
 
   def set_current_user
     self.updated_by = self.current_user
-  end
-  
-  def clear_shared_flag
-    self.update_attribute(:shared, nil)
   end
 end

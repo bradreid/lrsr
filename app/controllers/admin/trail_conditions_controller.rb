@@ -11,7 +11,7 @@ class Admin::TrailConditionsController < AdminController
   
   def update
     @trail_condition = TrailCondition.first
-    if @trail_condition.update_attributes(params[:trail_condition])
+    if @trail_condition.update_attributes(params[:trail_condition].merge(:shared => nil))
       flash[:notice] = "You successfully updated the trail conditions"
       redirect_to admin_index_path
     else
