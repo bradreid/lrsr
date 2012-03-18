@@ -8,6 +8,7 @@ Lrsr::Application.routes.draw do
     resources :trail_conditions
     resources :sponsors
     resources :contact_request_emails
+    resources :twitter_feeds
     resources :albums do
       scope :module => 'albums' do
         resources :album_pictures
@@ -30,6 +31,8 @@ Lrsr::Application.routes.draw do
   resources :maps
   resources :sponsors
   resources :executives
+  resources :pings
+  resources :twitter_feeds
 
 
   # The priority is based upon order of creation:
