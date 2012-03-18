@@ -144,21 +144,7 @@
     }
 
     function build_api_url(force_username) {
-      var proto = ('https:' == document.location.protocol ? 'https:' : 'http:');
-      var count = (s.fetch === null) ? s.count : s.fetch;
-      var common_params = '&include_entities=1&callback=?';
-      if (force_username && s.username.length == 1 ){
-        return proto+'//'+s.twitter_api_url+'/1/statuses/user_timeline.json?screen_name='+s.username[0]+'&count='+count+(s.retweets ? '&include_rts=1' : '')+'&page='+s.page+common_params;		
-      } else if (s.list) {
-        return proto+"//"+s.twitter_api_url+"/1/"+s.username[0]+"/lists/"+s.list+"/statuses.json?page="+s.page+"&per_page="+count+common_params;
-      } else if (s.favorites) {
-        return proto+"//"+s.twitter_api_url+"/favorites/"+s.username[0]+".json?page="+s.page+"&count="+count+common_params;
-      } else if (s.query === null && s.username.length == 1) {
-        return proto+'//'+s.twitter_api_url+'/1/statuses/user_timeline.json?screen_name='+s.username[0]+'&count='+count+(s.retweets ? '&include_rts=1' : '')+'&page='+s.page+common_params;
-      } else {
-        var query = (s.query || 'from:'+s.username.join(' OR from:'));
-        return proto+'//'+s.twitter_search_url+'/search.json?&q='+encodeURIComponent(query)+'&rpp='+count+'&page='+s.page+common_params;
-      }
+	    return "twitter_feeds.json"
     }
 
     function extract_avatar_url(item, secure) {
@@ -184,7 +170,7 @@
       var o = {};
       o.item = item;
       o.source = item.source;
-      o.screen_name = item.from_user || item.user.screen_name;
+      o.screen_name = 'test';//item.from_user || item.user.screen_name;
       o.avatar_size = s.avatar_size;
       o.avatar_url = extract_avatar_url(item, (document.location.protocol === 'https:'));
       o.retweet = typeof(item.retweeted_status) != 'undefined';
@@ -229,17 +215,11 @@
 
       $(widget).unbind("tweet:load").bind("tweet:load", function(){
         if (s.loading_text) $(widget).empty().append(loading);
-        var at_me;
-        $.getJSON(build_api_url(true), function(data){
-          at_me = $.map(data.results || data, extract_template_data);
-        });
-  
         $.getJSON(build_api_url(false), function(data){
           $(widget).empty().append(list);
           if (s.intro_text) list.before(intro);
           list.empty();
           var tweets = $.map(data.results || data, extract_template_data);
-          tweets = jQuery.merge(at_me, tweets);
           tweets = $.grep(tweets, s.filter).sort(s.comparator).slice(0, s.count);
           list.append($.map(tweets, function(o) { return "<li>" + t(s.template, o) + "</li>"; }).join('')).
               children('li:first').addClass('tweet_first').end().
