@@ -6,7 +6,7 @@ class TwitterFeed < ActiveRecord::Base
   
   def self.next_tweet
     events_today = Event.all(:conditions => ["shared_before is NULL and start <= ? AND start >= ?", Time.now + 5.hours, Time.now.beginning_of_day])
-    without_timestamps(Article,Event, TrailCondition) do
+    events_today.first.without_timestamps(Article,Event, TrailCondition) do
       events_today.first.update_attribute(:shared_before, Time.now) if events_today.any?
     end
     new_articles = Article.all(:conditions => {:shared => nil}, :order => 'id asc')
@@ -19,7 +19,7 @@ class TwitterFeed < ActiveRecord::Base
   def self.send_next_tweet
     next_tweet = TwitterFeed.next_tweet
     return unless next_tweet
-    without_timestamps(Article,Event, TrailCondition) do
+    next_tweet.without_timestamps(Article,Event, TrailCondition) do
       next_tweet.update_attribute(:shared,Time.now)
     end
     Tweet.new('lrsrclub').tweet(next_tweet.tweet)
