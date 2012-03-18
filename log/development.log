@@ -61346,3 +61346,283 @@ Rendered shared/nav/_main.html.haml (14.5ms)
 Rendered shared/_flashes.html.haml (3.2ms)
 Rendered welcome/index.html.haml within layouts/application (164.6ms)
 Completed 200 OK in 266ms (Views: 169.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:20:05 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:20:05')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:20:05') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (86.9ms)
+Rendered shared/_flashes.html.haml (3.4ms)
+Rendered welcome/index.html.haml within layouts/application (179.7ms)
+Completed 200 OK in 287ms (Views: 184.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:20:06 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:20:06')
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:20:06') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (14.6ms)
+Rendered shared/_flashes.html.haml (3.7ms)
+Rendered welcome/index.html.haml within layouts/application (189.7ms)
+Completed 200 OK in 264ms (Views: 229.2ms | ActiveRecord: 2.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:20:17 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.8ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:20:17')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:20:17') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (6.6ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (538.1ms)
+Completed 200 OK in 694ms (Views: 542.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:20:24 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:20:24')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:20:24') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (61.2ms)
+Rendered shared/nav/_main.html.haml (13.4ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (161.4ms)
+Completed 200 OK in 260ms (Views: 165.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sat Mar 17 21:20:28 -0500 2012
+  Processing by AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.1ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.1ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (74.2ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered albums/index.html.haml within layouts/application (205.0ms)
+Completed 200 OK in 252ms (Views: 238.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Mar 17 21:20:31 -0500 2012
+  Processing by AdminController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Completed 401 Unauthorized in 10ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sat Mar 17 21:20:31 -0500 2012
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (0.6ms)
+Rendered shared/nav/_main.html.haml (6.4ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 130ms (Views: 50.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Mar 17 21:20:40 -0500 2012
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"XuhdMlLqQjWZz/RAj5/aAJwh+MhTeGsaX54SjfApa6Q=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 107ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"XuhdMlLqQjWZz/RAj5/aAJwh+MhTeGsaX54SjfApa6Q=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (0.6ms)
+Rendered shared/nav/_main.html.haml (6.3ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 197ms (Views: 107.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Mar 17 21:20:44 -0500 2012
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"XuhdMlLqQjWZz/RAj5/aAJwh+MhTeGsaX54SjfApa6Q=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 109ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"XuhdMlLqQjWZz/RAj5/aAJwh+MhTeGsaX54SjfApa6Q=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (0.6ms)
+Rendered shared/nav/_main.html.haml (68.3ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (105.5ms)
+Completed 200 OK in 203ms (Views: 111.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Mar 17 21:20:49 -0500 2012
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"XuhdMlLqQjWZz/RAj5/aAJwh+MhTeGsaX54SjfApa6Q=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"bradreid20@gmail.com"}}
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'bradreid20@gmail.com' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_ip" = '74.216.76.20', "updated_at" = '2012-03-18 02:20:49.510372', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 62, "last_sign_in_at" = '2012-03-13 23:54:59.774605', "current_sign_in_at" = '2012-03-18 02:20:49.509713' WHERE "users"."id" = 3
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 184ms
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Mar 17 21:20:49 -0500 2012
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'[0m
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+Rendered shared/nav/_admin.html.haml (6.0ms)
+Rendered shared/_flashes.html.haml (61.3ms)
+Rendered admin/index.html.haml within layouts/application (107.5ms)
+Completed 200 OK in 203ms (Views: 113.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sat Mar 17 21:20:52 -0500 2012
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (19.9ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered albums/index.html.haml within layouts/application (158.1ms)
+Completed 200 OK in 173ms (Views: 161.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Sat Mar 17 21:20:54 -0500 2012
+  Processing by AdminController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "contact_requests" WHERE "contact_requests"."received" = 'f'
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+Rendered shared/nav/_admin.html.haml (63.7ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered admin/index.html.haml within layouts/application (105.2ms)
+Completed 200 OK in 134ms (Views: 110.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:25:50 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+Rendered welcome/index.html.haml within layouts/application (79.9ms)
+Completed 500 Internal Server Error in 118ms
+
+ActionView::Template::Error (Missing partial welcome/share_links with {:formats=>[:html], :handlers=>[:builder, :rjs, :rhtml, :haml, :rxml, :erb], :locale=>[:en, :en]} in view paths "/Users/breid/code/lrsr/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/kaminari-0.12.4/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.5.3/app/views"):
+    1: 
+    2: =render :partial => 'share_links'
+    3: %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :align => 'center', :width => '1024px'}
+    4:   %tr
+    5:     %td{:width => '680px', :valign => 'top'}
+  app/views/welcome/index.html.haml:2:in `_app_views_welcome_index_html_haml__1473514653_2190703380_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:25:50') ORDER BY start asc
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (55.5ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (87.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:25:50 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+Rendered welcome/index.html.haml within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (Missing partial welcome/share_links with {:formats=>[:html], :handlers=>[:builder, :rjs, :rhtml, :haml, :rxml, :erb], :locale=>[:en, :en]} in view paths "/Users/breid/code/lrsr/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/kaminari-0.12.4/app/views", "/Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.5.3/app/views"):
+    1: 
+    2: =render :partial => 'share_links'
+    3: %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :align => 'center', :width => '1024px'}
+    4:   %tr
+    5:     %td{:width => '680px', :valign => 'top'}
+  app/views/welcome/index.html.haml:2:in `_app_views_welcome_index_html_haml__1473514653_2193122740_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:25:50') ORDER BY start asc
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.2ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:26:01 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+Rendered shared/_share_links.html.haml (62.0ms)
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:26:01')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:26:01') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (79.7ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (228.3ms)
+Completed 200 OK in 266ms (Views: 232.2ms | ActiveRecord: 2.2ms)
