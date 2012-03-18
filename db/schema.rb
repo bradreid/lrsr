@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318211733) do
+ActiveRecord::Schema.define(:version => 20120318234910) do
 
   create_table "album_pictures", :force => true do |t|
     t.string    "title"
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(:version => 20120318211733) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "shared"
+    t.datetime "user_updated_at"
   end
 
   create_table "twitter_feeds", :force => true do |t|
