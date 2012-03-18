@@ -30,6 +30,7 @@ class TwitterFeed < ActiveRecord::Base
     if last && (last.created_at.utc > 30.minutes.ago.utc)
       last
     else
+      self.send_next_tweet
       self.create_feed
     end    
   end
