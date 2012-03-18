@@ -170,7 +170,7 @@
       var o = {};
       o.item = item;
       o.source = item.source;
-      o.screen_name = 'test';//item.from_user || item.user.screen_name;
+      o.screen_name = item.from_user || item.user.screen_name;
       o.avatar_size = s.avatar_size;
       o.avatar_url = extract_avatar_url(item, (document.location.protocol === 'https:'));
       o.retweet = typeof(item.retweeted_status) != 'undefined';
