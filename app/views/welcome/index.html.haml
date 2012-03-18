@@ -1,8 +1,4 @@
-- content_for :javascript_include do
-  :javascript
-    $(function($){
-      $('#weather').weatherfeed(['CAXX1687']);
-    });
+
 
 %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :align => 'center', :width => '1024px'}
   %tr
@@ -86,6 +82,11 @@
                     =link_to "#{event.name} on #{event.display_time}", event_path(event)
             -else
               No Scheduled Events
+      %table{:border => 0, :cellspacing => 0, :cellpadding => 10, :width => 334}
+        %tr
+          %td
+            %h3 Our Twitter Feed
+            =render :partial => 'shared/twitter'
 
   %tr
     %td{:colspan => 2}

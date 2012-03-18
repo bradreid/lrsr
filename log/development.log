@@ -58713,3 +58713,2636 @@ Rendered shared/nav/_main.html.haml (20.9ms)
 Rendered shared/_flashes.html.haml (2.7ms)
 Rendered albums/show.html.haml within layouts/application (133.2ms)
 Completed 200 OK in 150ms (Views: 138.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Mon Feb 06 12:42:24 -0600 2012
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.1ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.1ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered shared/nav/_main.html.haml (78.8ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered albums/index.html.haml within layouts/application (208.3ms)
+Completed 200 OK in 223ms (Views: 212.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Feb 06 13:00:50 -0600 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mAREL (31.2ms)[0m  [1mINSERT INTO "forcasts" ("winnipeg", "updated_at", "created_at", "raw_xml") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 06 Feb 2012 12:16 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-17" direction="20" speed="38.62" />
+<yweather:atmosphere humidity="" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:54 am" sunset="5:30 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 12:16 pm CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Mon, 06 Feb 2012 12:16 pm CST</pubDate>
+<yweather:condition text="Light Snow" code="14" temp="-7" date="Mon, 06 Feb 2012 12:16 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/14.gif"/><br />
+<b>Current Conditions:</b><br />
+Light Snow, -7 C<BR />
+<BR /><b>Forecast:</b><BR />
+Mon - Partly Cloudy. High: -7 Low: -19<br />
+Tue - Sunny. High: -7 Low: -12<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Mon" date="6 Feb 2012" low="-19" high="-7" text="Partly Cloudy" code="30" />
+<yweather:forecast day="Tue" date="7 Feb 2012" low="-12" high="-7" text="Sunny" code="32" />
+<guid isPermaLink="false">CAXX0547_2012_02_07_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api7.weather.ac4.yahoo.com uncompressed/chunked Mon Feb 6 11:00:51 PST 2012 -->
+', '2012-02-06 19:00:51.572103', '2012-02-06 19:00:51.572103', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 06 Feb 2012 11:59 am CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-12" direction="360" speed="16.09" />
+<yweather:atmosphere humidity="56" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:50 am" sunset="5:26 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 11:59 am CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Mon, 06 Feb 2012 11:59 am CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-6" date="Mon, 06 Feb 2012 11:59 am CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -6 C<BR />
+<BR /><b>Forecast:</b><BR />
+Mon - Partly Cloudy. High: -7 Low: -21<br />
+Tue - Sunny. High: -8 Low: -14<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Mon" date="6 Feb 2012" low="-21" high="-7" text="Partly Cloudy" code="30" />
+<yweather:forecast day="Tue" date="7 Feb 2012" low="-14" high="-8" text="Sunny" code="32" />
+<guid isPermaLink="false">CAXX1687_2012_02_07_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api4.weather.ac4.yahoo.com uncompressed/chunked Mon Feb 6 11:00:51 PST 2012 -->
+')[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-02-06 19:00:50')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-02-06 19:00:50') ORDER BY start asc
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (81.7ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (219.2ms)
+Completed 200 OK in 1027ms (Views: 242.7ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Mon Feb 06 13:01:11 -0600 2012
+  Processing by AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mAlbumPicture Load (0.2ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (20.9ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered albums/index.html.haml within layouts/application (167.3ms)
+Completed 200 OK in 210ms (Views: 199.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/albums/3" for 127.0.0.1 at Mon Feb 06 13:01:14 -0600 2012
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 3 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (78.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered albums/show.html.haml within layouts/application (132.5ms)
+Completed 200 OK in 149ms (Views: 137.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Feb 06 13:01:45 -0600 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (1.0ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (10.0ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (14.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (18.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-02-06 19:01:45')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-02-06 19:01:45') ORDER BY start asc
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (83.4ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (366.4ms)
+Completed 200 OK in 475ms (Views: 360.8ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Mon Feb 06 13:01:47 -0600 2012
+  Processing by AlbumsController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0[0m
+  [1m[35mAlbumPicture Load (5.9ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (21.1ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered albums/index.html.haml within layouts/application (170.6ms)
+Completed 200 OK in 190ms (Views: 173.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/albums/3" for 127.0.0.1 at Mon Feb 06 13:01:50 -0600 2012
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 3 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (0.3ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (84.7ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered albums/show.html.haml within layouts/application (139.7ms)
+Completed 200 OK in 160ms (Views: 144.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/albums/2" for 127.0.0.1 at Mon Feb 06 13:06:12 -0600 2012
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSponsor Load (0.7ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+  [1m[36mAlbum Load (10.6ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 2 LIMIT 1[0m
+  [1m[35mAlbumPicture Load (15.4ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2)
+  [1m[36mUser Load (6.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered shared/nav/_main.html.haml (28.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered albums/show.html.haml within layouts/application (387.6ms)
+Completed 200 OK in 472ms (Views: 372.3ms | ActiveRecord: 33.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Mon Feb 20 18:10:37 -0600 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (30.0ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTrailCondition Load (11.4ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (15.5ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (12.0ms)[0m  INSERT INTO "forcasts" ("raw_xml", "created_at", "winnipeg", "updated_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 20 Feb 2012 5:00 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="4" direction="130" speed="4.83" />
+<yweather:atmosphere humidity="65" visibility="" pressure="1007.1" rising="0" />
+<yweather:astronomy sunrise="7:24 am" sunset="5:49 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 5:00 pm CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Mon, 20 Feb 2012 5:00 pm CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="4" date="Mon, 20 Feb 2012 5:00 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 4 C<BR />
+<BR /><b>Forecast:</b><BR />
+Mon - Snow Showers. High: 1 Low: -3<br />
+Tue - Snow Showers. High: -2 Low: -9<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Mon" date="20 Feb 2012" low="-3" high="1" text="Snow Showers" code="14" />
+<yweather:forecast day="Tue" date="21 Feb 2012" low="-9" high="-2" text="Snow Showers" code="14" />
+<guid isPermaLink="false">CAXX1687_2012_02_21_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api14.weather.ac4.yahoo.com uncompressed/chunked Mon Feb 20 16:10:38 PST 2012 -->
+', '2012-02-21 00:10:38.914329', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 20 Feb 2012 5:00 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-2" direction="170" speed="12.87" />
+<yweather:atmosphere humidity="87" visibility="" pressure="1006.8" rising="2" />
+<yweather:astronomy sunrise="7:28 am" sunset="5:56 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 5:00 pm CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Mon, 20 Feb 2012 5:00 pm CST</pubDate>
+<yweather:condition text="Cloudy" code="26" temp="2" date="Mon, 20 Feb 2012 5:00 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/26.gif"/><br />
+<b>Current Conditions:</b><br />
+Cloudy, 2 C<BR />
+<BR /><b>Forecast:</b><BR />
+Mon - Snow Showers. High: 2 Low: -3<br />
+Tue - Few Snow Showers. High: -1 Low: -8<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Mon" date="20 Feb 2012" low="-3" high="2" text="Snow Showers" code="14" />
+<yweather:forecast day="Tue" date="21 Feb 2012" low="-8" high="-1" text="Few Snow Showers" code="14" />
+<guid isPermaLink="false">CAXX0547_2012_02_21_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api16.weather.ac4.yahoo.com uncompressed/chunked Mon Feb 20 16:10:38 PST 2012 -->
+', '2012-02-21 00:10:38.914329')
+  [1m[36mArticle Load (23.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (26.4ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-02-21 00:10:38')
+Rendered shared/nav/_main.html.haml (64.9ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (709.4ms)
+Completed 200 OK in 1726ms (Views: 677.4ms | ActiveRecord: 118.9ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 07 17:07:42 -0600 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.8ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTrailCondition Load (0.3ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "forcasts" ("created_at", "updated_at", "winnipeg", "raw_xml") VALUES ('2012-03-07 23:07:44.057305', '2012-03-07 23:07:44.057305', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Wed, 07 Mar 2012 3:58 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-18" direction="300" speed="25.75" />
+<yweather:atmosphere humidity="75" visibility="" pressure="1015.1" rising="1" />
+<yweather:astronomy sunrise="6:56 am" sunset="6:21 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 3:58 pm CST</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Wed, 07 Mar 2012 3:58 pm CST</pubDate>
+<yweather:condition text="Partly Cloudy" code="30" temp="-9" date="Wed, 07 Mar 2012 3:58 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/30.gif"/><br />
+<b>Current Conditions:</b><br />
+Partly Cloudy, -9 C<BR />
+<BR /><b>Forecast:</b><BR />
+Wed - Snow Showers Late. High: -6 Low: -9<br />
+Thu - Snow Showers. High: -4 Low: -15<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Wed" date="7 Mar 2012" low="-9" high="-6" text="Snow Showers Late" code="46" />
+<yweather:forecast day="Thu" date="8 Mar 2012" low="-15" high="-4" text="Snow Showers" code="14" />
+<guid isPermaLink="false">CAXX0547_2012_03_08_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api9.weather.ac4.yahoo.com uncompressed/chunked Wed Mar 7 15:07:35 PST 2012 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Wed, 07 Mar 2012 3:58 pm CST</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="-12" direction="320" speed="11.27" />
+<yweather:atmosphere humidity="56" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="6:52 am" sunset="6:17 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 3:58 pm CST</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Wed, 07 Mar 2012 3:58 pm CST</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="-7" date="Wed, 07 Mar 2012 3:58 pm CST" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, -7 C<BR />
+<BR /><b>Forecast:</b><BR />
+Wed - Snow Showers Late. High: -7 Low: -9<br />
+Thu - Snow Showers. High: -4 Low: -14<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Wed" date="7 Mar 2012" low="-9" high="-7" text="Snow Showers Late" code="46" />
+<yweather:forecast day="Thu" date="8 Mar 2012" low="-14" high="-4" text="Snow Showers" code="14" />
+<guid isPermaLink="false">CAXX1687_2012_03_08_7_00_CST</guid>
+</item>
+</channel>
+</rss>
+<!-- api15.weather.ac4.yahoo.com uncompressed/chunked Wed Mar 7 15:07:44 PST 2012 -->
+')
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-07 23:07:42')
+Rendered shared/nav/_main.html.haml (69.8ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (1415.5ms)
+Completed 200 OK in 2823ms (Views: 1479.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 07 17:08:08 -0600 2012
+  Processing by AdminController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Completed   in 10ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Mar 07 17:08:08 -0600 2012
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Rendered devise/shared/_links.erb (1.2ms)
+Rendered shared/nav/_main.html.haml (6.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (100.7ms)
+Completed 200 OK in 124ms (Views: 107.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Mar 07 17:08:10 -0600 2012
+  Processing by RegistrationsController#new as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+
+RuntimeError (don't do it):
+  app/controllers/registrations_controller.rb:3:in `new'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.2ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Wed Mar 07 17:12:57 -0600 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.7ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-07 23:12:57')[0m
+Rendered shared/nav/_main.html.haml (61.7ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (447.2ms)
+Completed 200 OK in 570ms (Views: 454.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at Wed Mar 07 17:13:02 -0600 2012
+  Processing by AdminController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+Completed   in 10ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Mar 07 17:13:02 -0600 2012
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered shared/nav/_main.html.haml (6.5ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 126ms (Views: 50.5ms | ActiveRecord: 1.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 18:53:04 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (23.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from /Users/breid/code/lrsr/app/models/article.rb:8)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTrailCondition Load (0.3ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (25.7ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (20.2ms)[0m  INSERT INTO "forcasts" ("winnipeg", "raw_xml", "created_at", "updated_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 5:58 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="16" direction="40" speed="24.14" />
+<yweather:atmosphere humidity="52" visibility="" pressure="1005.5" rising="2" />
+<yweather:astronomy sunrise="7:35 am" sunset="7:36 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 5:58 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 17 Mar 2012 5:58 pm CDT</pubDate>
+<yweather:condition text="Mostly Cloudy" code="28" temp="16" date="Sat, 17 Mar 2012 5:58 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/28.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Mostly Clear. High: 19 Low: 12<br />
+Sun - Mostly Cloudy. High: 20 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="12" high="19" text="Mostly Clear" code="33" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="16" high="20" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX0547_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api8.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 16:52:53 PDT 2012 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 5:58 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="16" direction="360" speed="8.05" />
+<yweather:atmosphere humidity="42" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:31 am" sunset="7:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 5:58 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 17 Mar 2012 5:58 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="16" date="Sat, 17 Mar 2012 5:58 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Isolated Thunderstorms. High: 15 Low: 10<br />
+Sun - Mostly Cloudy. High: 17 Low: 13<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="10" high="15" text="Isolated Thunderstorms" code="47" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="13" high="17" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX1687_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api14.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 16:53:05 PDT 2012 -->
+', '2012-03-17 23:53:05.961035', '2012-03-17 23:53:05.961035')
+  [1m[36mArticle Load (18.8ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (15.9ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-17 23:53:05')
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-17 23:53:05') ORDER BY start asc[0m
+Rendered shared/nav/_main.html.haml (7.1ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (627.1ms)
+Completed 200 OK in 1735ms (Views: 628.7ms | ActiveRecord: 105.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 18:55:07 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "forcasts" ("updated_at", "created_at", "winnipeg", "raw_xml") VALUES ('2012-03-17 23:55:08.317453', '2012-03-17 23:55:08.317453', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 5:58 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="16" direction="40" speed="24.14" />
+<yweather:atmosphere humidity="52" visibility="" pressure="1005.5" rising="2" />
+<yweather:astronomy sunrise="7:35 am" sunset="7:36 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 5:58 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 17 Mar 2012 5:58 pm CDT</pubDate>
+<yweather:condition text="Mostly Cloudy" code="28" temp="16" date="Sat, 17 Mar 2012 5:58 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/28.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Mostly Clear. High: 19 Low: 12<br />
+Sun - Mostly Cloudy. High: 20 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="12" high="19" text="Mostly Clear" code="33" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="16" high="20" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX0547_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api14.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 16:55:08 PDT 2012 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 5:58 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="16" direction="360" speed="8.05" />
+<yweather:atmosphere humidity="42" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:31 am" sunset="7:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 5:58 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 17 Mar 2012 5:58 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="16" date="Sat, 17 Mar 2012 5:58 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Isolated Thunderstorms. High: 15 Low: 10<br />
+Sun - Mostly Cloudy. High: 17 Low: 13<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="10" high="15" text="Isolated Thunderstorms" code="47" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="13" high="17" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX1687_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api16.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 16:55:08 PDT 2012 -->
+')
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+Rendered welcome/index.html.haml within layouts/application (69.5ms)
+Completed 500 Internal Server Error in 789ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    21:     %td{:width => '268px', :valign => 'top'}
+    22:       LRSR Sponsor:
+    23:       %br
+    24:       =link_to @sponsor.name, (@sponsor.url.blank? ? sponsors_path : @sponsor.url)
+    25:       %br
+    26:       %br
+    27:       %table{:border => 0, :cellspacing => 10, :cellpadding => 0, :width => "334px", :bgcolor => '#DCDCDC'}
+  app/views/welcome/index.html.haml:24:in `_app_views_welcome_index_html_haml__1473514653_2192632280_0'
+
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-17 23:55:07') ORDER BY start asc
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/breid/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 18:59:32 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "forcasts" ("created_at", "winnipeg", "updated_at", "raw_xml") VALUES ('2012-03-17 23:59:33.821483', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 5:58 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="16" direction="40" speed="24.14" />
+<yweather:atmosphere humidity="52" visibility="" pressure="1005.5" rising="2" />
+<yweather:astronomy sunrise="7:35 am" sunset="7:36 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 5:58 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 17 Mar 2012 5:58 pm CDT</pubDate>
+<yweather:condition text="Mostly Cloudy" code="28" temp="16" date="Sat, 17 Mar 2012 5:58 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/28.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Mostly Clear. High: 19 Low: 12<br />
+Sun - Mostly Cloudy. High: 20 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="12" high="19" text="Mostly Clear" code="33" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="16" high="20" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX0547_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api14.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 16:59:33 PDT 2012 -->
+', '2012-03-17 23:59:33.821483', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 5:58 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="16" direction="360" speed="8.05" />
+<yweather:atmosphere humidity="42" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:31 am" sunset="7:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 5:58 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 17 Mar 2012 5:58 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="16" date="Sat, 17 Mar 2012 5:58 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 16 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Isolated Thunderstorms. High: 15 Low: 10<br />
+Sun - Mostly Cloudy. High: 17 Low: 13<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="10" high="15" text="Isolated Thunderstorms" code="47" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="13" high="17" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX1687_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api4.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 16:59:33 PDT 2012 -->
+')[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-17 23:59:32')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-17 23:59:32') ORDER BY start asc
+Rendered shared/nav/_main.html.haml (13.0ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (155.8ms)
+Completed 200 OK in 1068ms (Views: 160.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/albums" for 127.0.0.1 at Sat Mar 17 18:59:47 -0500 2012
+  Processing by AlbumsController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT "albums".* FROM "albums" ORDER BY id desc LIMIT 25 OFFSET 0
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 6) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 5) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 4) LIMIT 1
+  [1m[36mAlbumPicture Load (0.2ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 3) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 2) LIMIT 1
+  [1m[36mAlbumPicture Load (0.1ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 1) LIMIT 1
+Rendered shared/nav/_main.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (62.6ms)
+Rendered albums/index.html.haml within layouts/application (220.5ms)
+Completed 200 OK in 285ms (Views: 242.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at Sat Mar 17 18:59:50 -0500 2012
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 7 LIMIT 1
+  [1m[36mAlbumPicture Load (1.0ms)[0m  [1mSELECT "album_pictures".* FROM "album_pictures" WHERE ("album_pictures".album_id = 7)[0m
+Rendered shared/nav/_main.html.haml (12.4ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered albums/show.html.haml within layouts/application (176.4ms)
+Completed 200 OK in 228ms (Views: 217.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:00:32 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:00:32')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:00:32') ORDER BY start asc
+Rendered shared/nav/_main.html.haml (12.1ms)
+Rendered shared/_flashes.html.haml (60.2ms)
+Rendered welcome/index.html.haml within layouts/application (208.0ms)
+Completed 200 OK in 245ms (Views: 212.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:02:12 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:02:12')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:02:12') ORDER BY start asc[0m
+Rendered shared/nav/_main.html.haml (72.7ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (211.8ms)
+Completed 200 OK in 247ms (Views: 215.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:04:09 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:04:09')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:04:09') ORDER BY start asc
+Rendered shared/nav/_main.html.haml (12.5ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (211.2ms)
+Completed 200 OK in 249ms (Views: 215.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:06:37 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:06:37')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:06:37') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.3ms)
+Rendered shared/nav/_main.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (152.8ms)
+Completed 200 OK in 248ms (Views: 157.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:08:02 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:08:02')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:08:02') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.1ms)
+Rendered shared/nav/_main.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (153.9ms)
+Completed 200 OK in 243ms (Views: 158.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:09:15 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:09:15')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:09:15') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.3ms)
+Rendered shared/nav/_main.html.haml (72.2ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (210.5ms)
+Completed 200 OK in 246ms (Views: 214.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:10:21 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (56.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:10:21')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:10:21') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.4ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (61.3ms)
+Rendered welcome/index.html.haml within layouts/application (213.3ms)
+Completed 200 OK in 249ms (Views: 161.5ms | ActiveRecord: 57.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:12:14 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:12:15')
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:12:15') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (154.1ms)
+Completed 200 OK in 250ms (Views: 158.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:13:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.7ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:13:13')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:13:13') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.3ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (154.3ms)
+Completed 200 OK in 247ms (Views: 158.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:14:42 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:14:42')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:14:42') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.4ms)
+Rendered shared/nav/_main.html.haml (72.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (209.6ms)
+Completed 200 OK in 245ms (Views: 214.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:15:03 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:15:03')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:15:03') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (12.4ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered welcome/index.html.haml within layouts/application (213.4ms)
+Completed 200 OK in 250ms (Views: 217.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:16:10 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:16:10')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:16:10') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (57.9ms)
+Rendered shared/nav/_main.html.haml (11.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (153.5ms)
+Completed 200 OK in 249ms (Views: 158.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:16:32 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:16:32')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:16:32') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.4ms)
+Rendered shared/nav/_main.html.haml (12.7ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (156.5ms)
+Completed 200 OK in 243ms (Views: 160.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:16:59 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:16:59')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:16:59') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.4ms)
+Rendered shared/nav/_main.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (154.1ms)
+Completed 200 OK in 191ms (Views: 158.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:18:04 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:18:04')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:18:04') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.3ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (157.2ms)
+Completed 200 OK in 251ms (Views: 161.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:18:32 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:18:32')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:18:32') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (158.5ms)
+Completed 200 OK in 196ms (Views: 162.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:18:58 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:18:58')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:18:58') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (74.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (162.9ms)
+Completed 200 OK in 256ms (Views: 167.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:22:03 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:22:03')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:22:03') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (12.7ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (156.2ms)
+Completed 200 OK in 195ms (Views: 160.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:22:56 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:22:56')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:22:56') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (75.2ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (213.2ms)
+Completed 200 OK in 250ms (Views: 217.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:23:19 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:23:19')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:23:19') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (59.2ms)
+Rendered shared/nav/_main.html.haml (12.5ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (156.1ms)
+Completed 200 OK in 253ms (Views: 160.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:23:50 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:23:50')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:23:50') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (73.1ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (210.9ms)
+Completed 200 OK in 247ms (Views: 215.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:24:14 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:24:14')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:24:14') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (160.9ms)
+Completed 200 OK in 259ms (Views: 165.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:24:32 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:24:32')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:24:32') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (211.8ms)
+Completed 200 OK in 248ms (Views: 215.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:25:16 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:25:16')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:25:16') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (13.1ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (154.4ms)
+Completed 200 OK in 249ms (Views: 158.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:26:03 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:26:03')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:26:03') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.9ms)
+Rendered shared/nav/_main.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (159.9ms)
+Completed 200 OK in 196ms (Views: 163.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:27:35 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:27:35')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:27:35') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (75.1ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (158.7ms)
+Completed 200 OK in 253ms (Views: 220.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:27:46 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:27:46')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:27:46') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (153.8ms)
+Completed 200 OK in 251ms (Views: 158.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:29:07 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:29:07')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:29:07') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.0ms)
+Rendered shared/_flashes.html.haml (2.7ms)
+Rendered welcome/index.html.haml within layouts/application (156.5ms)
+Completed 200 OK in 195ms (Views: 161.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:29:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:29:13')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:29:13') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (77.0ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (163.3ms)
+Completed 200 OK in 262ms (Views: 167.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:29:30 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:29:30')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:29:30') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (12.5ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (156.8ms)
+Completed 200 OK in 255ms (Views: 161.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:32:24 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "forcasts" ("created_at", "raw_xml", "updated_at", "winnipeg") VALUES ('2012-03-18 00:32:25.545242', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 7:00 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="13" direction="360" speed="8.05" />
+<yweather:atmosphere humidity="51" visibility="" pressure="" rising="0" />
+<yweather:astronomy sunrise="7:31 am" sunset="7:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 7:00 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 17 Mar 2012 7:00 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="13" date="Sat, 17 Mar 2012 7:00 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 13 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Isolated Thunderstorms. High: 15 Low: 10<br />
+Sun - Mostly Cloudy. High: 17 Low: 13<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="10" high="15" text="Isolated Thunderstorms" code="47" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="13" high="17" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX1687_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api13.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 17:32:25 PDT 2012 -->
+', '2012-03-18 00:32:25.545242', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 7:00 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="14" direction="30" speed="24.14" />
+<yweather:atmosphere humidity="51" visibility="" pressure="1005.9" rising="1" />
+<yweather:astronomy sunrise="7:35 am" sunset="7:36 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 7:00 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 17 Mar 2012 7:00 pm CDT</pubDate>
+<yweather:condition text="Mostly Cloudy" code="28" temp="14" date="Sat, 17 Mar 2012 7:00 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/28.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 14 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Mostly Clear. High: 19 Low: 12<br />
+Sun - Mostly Cloudy. High: 20 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="12" high="19" text="Mostly Clear" code="33" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="16" high="20" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX0547_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api17.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 17:32:24 PDT 2012 -->
+')
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:32:24')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:32:24') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (220.0ms)
+Completed 200 OK in 956ms (Views: 224.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:33:36 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:33:36')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:33:36') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (164.4ms)
+Completed 200 OK in 262ms (Views: 169.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:33:39 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:33:39')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:33:39') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (60.8ms)
+Rendered shared/nav/_main.html.haml (12.4ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (157.2ms)
+Completed 200 OK in 195ms (Views: 161.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 19:40:45 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 00:40:45')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 00:40:45') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (157.4ms)
+Completed 200 OK in 196ms (Views: 161.7ms | ActiveRecord: 2.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /Users/breid/code/lrsr/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:41:11 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "forcasts" ("winnipeg", "created_at", "updated_at", "raw_xml") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 8:00 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="7" direction="40" speed="22.53" />
+<yweather:atmosphere humidity="66" visibility="" pressure="1005.3" rising="2" />
+<yweather:astronomy sunrise="7:35 am" sunset="7:36 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 8:00 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 17 Mar 2012 8:00 pm CDT</pubDate>
+<yweather:condition text="Mostly Cloudy" code="27" temp="10" date="Sat, 17 Mar 2012 8:00 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/27.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 10 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Partly Cloudy. High: 19 Low: 12<br />
+Sun - Mostly Cloudy. High: 20 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="12" high="19" text="Partly Cloudy" code="29" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="16" high="20" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX0547_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api7.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 18:41:12 PDT 2012 -->
+', '2012-03-18 01:41:12.304735', '2012-03-18 01:41:12.304735', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 8:00 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="11" direction="10" speed="4.83" />
+<yweather:atmosphere humidity="58" visibility="" pressure="1006.1" rising="0" />
+<yweather:astronomy sunrise="7:31 am" sunset="7:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 8:00 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 17 Mar 2012 8:00 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="11" date="Sat, 17 Mar 2012 8:00 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 11 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Isolated Thunderstorms. High: 15 Low: 9<br />
+Sun - Mostly Cloudy. High: 17 Low: 13<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="9" high="15" text="Isolated Thunderstorms" code="47" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="13" high="17" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX1687_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api7.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 18:41:12 PDT 2012 -->
+')[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:41:11')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:41:11') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (162.1ms)
+Completed 200 OK in 965ms (Views: 167.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:42:16 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:42:16')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:42:16') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.9ms)
+Rendered shared/nav/_main.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (160.6ms)
+Completed 200 OK in 198ms (Views: 165.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:44:19 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:44:19')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:44:19') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.6ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (216.2ms)
+Completed 200 OK in 253ms (Views: 220.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:44:37 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:44:37')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:44:37') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (13.1ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (158.6ms)
+Completed 200 OK in 254ms (Views: 163.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:45:17 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:45:17')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:45:17') ORDER BY start asc
+Rendered shared/_twitter.html.haml (60.0ms)
+Rendered shared/nav/_main.html.haml (12.7ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (155.7ms)
+Completed 200 OK in 193ms (Views: 159.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:45:41 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:45:41')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:45:41') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (13.1ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (155.1ms)
+Completed 200 OK in 191ms (Views: 159.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:45:53 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:45:53')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:45:53') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (75.6ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (213.8ms)
+Completed 200 OK in 251ms (Views: 218.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:46:27 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:46:27')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:46:27') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (160.1ms)
+Completed 200 OK in 258ms (Views: 164.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:46:41 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:46:41')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:46:41') ORDER BY start asc
+Rendered shared/_twitter.html.haml (61.0ms)
+Rendered shared/nav/_main.html.haml (12.4ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (155.8ms)
+Completed 200 OK in 193ms (Views: 159.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:47:02 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:47:02')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:47:02') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (13.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (155.7ms)
+Completed 200 OK in 192ms (Views: 159.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:47:34 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:47:34')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:47:34') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.5ms)
+Rendered shared/_flashes.html.haml (66.1ms)
+Rendered welcome/index.html.haml within layouts/application (216.7ms)
+Completed 200 OK in 253ms (Views: 221.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:47:50 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:47:50')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:47:50') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (75.4ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (160.4ms)
+Completed 200 OK in 257ms (Views: 164.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:48:29 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:48:29')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:48:29') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.6ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (159.2ms)
+Completed 200 OK in 261ms (Views: 163.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:48:51 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:48:51')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:48:51') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (13.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (160.2ms)
+Completed 200 OK in 197ms (Views: 164.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:49:42 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:49:42')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:49:42') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (157.6ms)
+Completed 200 OK in 194ms (Views: 161.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:50:30 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:50:30')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:50:30') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (160.0ms)
+Completed 200 OK in 197ms (Views: 164.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:50:50 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:50:50')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:50:50') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (219.2ms)
+Completed 200 OK in 257ms (Views: 223.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:51:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.5ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:51:13')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:51:13') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (78.9ms)
+Rendered shared/_flashes.html.haml (3.3ms)
+Rendered welcome/index.html.haml within layouts/application (164.4ms)
+Completed 200 OK in 261ms (Views: 168.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:51:33 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.4ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:51:33')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:51:33') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (77.8ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (165.5ms)
+Completed 200 OK in 271ms (Views: 170.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:51:43 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:51:43')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:51:43') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (13.3ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (160.7ms)
+Completed 200 OK in 261ms (Views: 164.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:52:03 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:52:04')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:52:04') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (160.8ms)
+Completed 200 OK in 200ms (Views: 165.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:52:42 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:52:42')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:52:42') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (2.0ms)
+Rendered shared/nav/_main.html.haml (13.3ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (161.1ms)
+Completed 200 OK in 199ms (Views: 165.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:52:53 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:52:53')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:52:53') ORDER BY start asc
+Rendered shared/_twitter.html.haml (63.2ms)
+Rendered shared/nav/_main.html.haml (13.4ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (163.7ms)
+Completed 200 OK in 204ms (Views: 168.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:53:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:53:13')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:53:13') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (161.7ms)
+Completed 200 OK in 200ms (Views: 166.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:53:34 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:53:34')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:53:34') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (162.5ms)
+Completed 200 OK in 200ms (Views: 166.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:53:52 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:53:52')
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:53:52') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.5ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (160.8ms)
+Completed 200 OK in 198ms (Views: 165.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:54:03 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:54:03')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:54:03') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (162.1ms)
+Completed 200 OK in 199ms (Views: 166.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:54:22 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:54:23')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:54:23') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (159.7ms)
+Completed 200 OK in 196ms (Views: 164.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:54:34 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:54:34')[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:54:34') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (13.7ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (164.1ms)
+Completed 200 OK in 202ms (Views: 168.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:55:53 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:55:53')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:55:53') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (165.1ms)
+Completed 200 OK in 202ms (Views: 169.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:56:05 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.1ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:56:05')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:56:05') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (164.4ms)
+Completed 200 OK in 201ms (Views: 168.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:57:01 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:57:01')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:57:01') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (160.0ms)
+Completed 200 OK in 197ms (Views: 164.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:57:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:57:13')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:57:13') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (13.4ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (161.8ms)
+Completed 200 OK in 198ms (Views: 166.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:58:36 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:58:36')
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:58:36') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.1ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (160.0ms)
+Completed 200 OK in 196ms (Views: 164.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:58:56 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:58:56')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:58:56') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.5ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (160.3ms)
+Completed 200 OK in 196ms (Views: 164.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 20:59:09 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 01:59:09')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 01:59:09') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (13.4ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (163.0ms)
+Completed 200 OK in 201ms (Views: 167.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:01:51 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:01:51')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:01:51') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (3.1ms)
+Rendered welcome/index.html.haml within layouts/application (163.0ms)
+Completed 200 OK in 201ms (Views: 167.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:02:38 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:02:38')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:02:38') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (14.0ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (162.0ms)
+Completed 200 OK in 198ms (Views: 166.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:03:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:03:13')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:03:13') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (13.3ms)
+Rendered shared/_flashes.html.haml (3.0ms)
+Rendered welcome/index.html.haml within layouts/application (160.4ms)
+Completed 200 OK in 198ms (Views: 164.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:04:18 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:04:18')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:04:18') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (159.2ms)
+Completed 200 OK in 196ms (Views: 163.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:11:13 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.1ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "forcasts" ("winnipeg", "raw_xml", "created_at", "updated_at") VALUES ('<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Winnipeg, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<description>Yahoo! Weather for Winnipeg, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 8:00 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Winnipeg" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="7" direction="40" speed="22.53" />
+<yweather:atmosphere humidity="66" visibility="" pressure="1005.3" rising="2" />
+<yweather:astronomy sunrise="7:35 am" sunset="7:36 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Winnipeg, CA at 8:00 pm CDT</title>
+<geo:lat>49.9</geo:lat>
+<geo:long>-97.14</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html</link>
+<pubDate>Sat, 17 Mar 2012 8:00 pm CDT</pubDate>
+<yweather:condition text="Mostly Cloudy" code="27" temp="10" date="Sat, 17 Mar 2012 8:00 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/27.gif"/><br />
+<b>Current Conditions:</b><br />
+Mostly Cloudy, 10 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Partly Cloudy. High: 19 Low: 12<br />
+Sun - Mostly Cloudy. High: 20 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Winnipeg__CA/*http://weather.yahoo.com/forecast/CAXX0547_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="12" high="19" text="Partly Cloudy" code="29" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="16" high="20" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX0547_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api16.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 19:11:13 PDT 2012 -->
+', '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Lac du Bonnet, CA</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<description>Yahoo! Weather for Lac du Bonnet, CA</description>
+<language>en-us</language>
+<lastBuildDate>Sat, 17 Mar 2012 8:00 pm CDT</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Lac du Bonnet" region="MB" country="Canada"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="11" direction="10" speed="4.83" />
+<yweather:atmosphere humidity="58" visibility="" pressure="1006.1" rising="0" />
+<yweather:astronomy sunrise="7:31 am" sunset="7:32 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Lac du Bonnet, CA at 8:00 pm CDT</title>
+<geo:lat>50.25</geo:lat>
+<geo:long>-96.06</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html</link>
+<pubDate>Sat, 17 Mar 2012 8:00 pm CDT</pubDate>
+<yweather:condition text="Unknown" code="3200" temp="11" date="Sat, 17 Mar 2012 8:00 pm CDT" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/3200.gif"/><br />
+<b>Current Conditions:</b><br />
+Unknown, 11 C<BR />
+<BR /><b>Forecast:</b><BR />
+Sat - Isolated Thunderstorms. High: 15 Low: 9<br />
+Sun - Mostly Cloudy. High: 17 Low: 13<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Lac_du_Bonnet__CA/*http://weather.yahoo.com/forecast/CAXX1687_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Sat" date="17 Mar 2012" low="9" high="15" text="Isolated Thunderstorms" code="47" />
+<yweather:forecast day="Sun" date="18 Mar 2012" low="13" high="17" text="Mostly Cloudy" code="28" />
+<guid isPermaLink="false">CAXX1687_2012_03_18_7_00_CDT</guid>
+</item>
+</channel>
+</rss>
+<!-- api4.weather.ac4.yahoo.com uncompressed/chunked Sat Mar 17 19:11:13 PDT 2012 -->
+', '2012-03-18 02:11:13.691480', '2012-03-18 02:11:13.691480')
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:11:13')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:11:13') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.8ms)
+Rendered shared/nav/_main.html.haml (12.7ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (161.0ms)
+Completed 200 OK in 813ms (Views: 165.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:11:19 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.1ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:11:19')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:11:19') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (160.7ms)
+Completed 200 OK in 198ms (Views: 165.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:11:36 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.2ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.1ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.1ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:11:36')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:11:36') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.6ms)
+Rendered shared/nav/_main.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (2.9ms)
+Rendered welcome/index.html.haml within layouts/application (166.1ms)
+Completed 200 OK in 202ms (Views: 170.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:11:41 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[35mSponsor Load (0.6ms)[0m  SELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[36mTrailCondition Load (0.2ms)[0m  [1mSELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1[0m
+  [1m[35mNewsletter Load (0.2ms)[0m  SELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1
+  [1m[36mForcast Load (0.2ms)[0m  [1mSELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:11:42')[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:11:42') ORDER BY start asc
+Rendered shared/_twitter.html.haml (1.5ms)
+Rendered shared/nav/_main.html.haml (13.0ms)
+Rendered shared/_flashes.html.haml (2.8ms)
+Rendered welcome/index.html.haml within layouts/application (159.1ms)
+Completed 200 OK in 264ms (Views: 163.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 17 21:11:47 -0500 2012
+  Processing by WelcomeController#index as HTML
+  [1m[36mSponsor Load (0.6ms)[0m  [1mSELECT * FROM sponsors ORDER BY RANDOM() LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/event.rb:4)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/breid/code/lrsr/app/models/article.rb:10)
+  [1m[35mTrailCondition Load (0.1ms)[0m  SELECT "trail_conditions".* FROM "trail_conditions" LIMIT 1
+  [1m[36mNewsletter Load (0.2ms)[0m  [1mSELECT "newsletters".* FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [1m[35mForcast Load (0.2ms)[0m  SELECT "forcasts".* FROM "forcasts" ORDER BY forcasts.id DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."front_page" = 't' ORDER BY id desc[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "events" WHERE (start >= '2012-03-18 02:11:47')
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (start >= '2012-03-18 02:11:47') ORDER BY start asc[0m
+Rendered shared/_twitter.html.haml (1.7ms)
+Rendered shared/nav/_main.html.haml (14.5ms)
+Rendered shared/_flashes.html.haml (3.2ms)
+Rendered welcome/index.html.haml within layouts/application (164.6ms)
+Completed 200 OK in 266ms (Views: 169.0ms | ActiveRecord: 1.9ms)

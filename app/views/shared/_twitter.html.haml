@@ -1,0 +1,19 @@
+:javascript
+  jQuery(function($){
+    $("#tweet").tweet({
+      query: "@lrsrclub",
+      join_text: "auto",
+      username: "lrsrclub",
+      avatar_size: 30,
+      count: 5,
+      auto_join_text_default: "",
+      auto_join_text_ed: "",
+      auto_join_text_ing: "",
+      auto_join_text_reply: "",
+      auto_join_text_url: "",
+      loading_text: "loading tweets..."
+    });
+  });
+<a href="https://twitter.com/lrsrclub" class="twitter-follow-button" data-show-count="false">Follow @lrsrclub</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+#tweet
