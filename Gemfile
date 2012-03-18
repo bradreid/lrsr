@@ -7,7 +7,7 @@ gem 'rails', '3.0.9'
 
 gem 'rake', '0.8.7'
 gem 'sqlite3'
-gem 'devise'
+gem 'devise', ">1.4.5"
 gem "haml", "~> 3.1.2"
 gem 'kaminari'
 gem "jquery-rails"
