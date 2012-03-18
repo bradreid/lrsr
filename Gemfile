@@ -16,6 +16,8 @@ gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-s3'
 gem 'rmagick'
 
+gem 'twitter', ">2.0.0"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
