@@ -93,8 +93,8 @@ class Tweet
         Twitter.configure do |config|
           config.consumer_key = 'LxfI2yqXM8bQ7hTV4Lpgtw'
           config.consumer_secret = 'ika7XoqUm2ytFXwhXq4WQxTntLxJObsSymdC7xaPc0'
-          config.oauth_token = '324607865-xODwDWY3Ld1tayzsuavh7HobRbQNhAaBhlNr03DQ'
-          config.oauth_token_secret = 'NV6YzPJTMy1u3L7b1mRVW0rxxonp4N3XkfU8zuLzgJo'
+          config.oauth_token = '324607865-C8kXUT55BiXRpGrN1gTufMlM7pqW7S7Aq7TZDD01'
+          config.oauth_token_secret = '8fe5ZC4KcGRCKVVucZwjKff0Ue0Bqme1EcDUopKp8'
         end        
       end  
       @twitter_client ||= Twitter::Client.new    

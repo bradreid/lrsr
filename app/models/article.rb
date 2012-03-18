@@ -9,6 +9,17 @@ class Article < ActiveRecord::Base
   
   named_scope :front_page, :conditions => {:front_page => true}, :order => 'id desc'
   
+  def tweet
+    begin
+      b = Bitly.new('symingtonroad', 'R_50ed08c79b7d216360e2403ac3000528')
+      url = "http://www.lrsr.ca/" 
+      short = b.shorten(url)
+      "#{self.title[0..125]} #{short.short_url}"     
+    rescue Exception => e
+      nil
+    end    
+  end
+  
 private
  
   def set_current_user

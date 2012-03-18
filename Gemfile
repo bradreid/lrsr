@@ -16,6 +16,7 @@ gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-s3'
 gem 'rmagick'
 
+gem 'bitly'
 gem 'twitter', ">2.0.0"
 gem 'json'
 

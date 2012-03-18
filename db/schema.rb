@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318163343) do
+ActiveRecord::Schema.define(:version => 20120318211733) do
 
   create_table "album_pictures", :force => true do |t|
     t.string    "title"
@@ -32,16 +32,19 @@ ActiveRecord::Schema.define(:version => 20120318163343) do
   end
 
   create_table "articles", :force => true do |t|
-    t.string    "title"
-    t.integer   "created_by_id"
-    t.text      "body"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.boolean   "front_page"
-    t.string    "image_file_name"
-    t.string    "image_content_type"
-    t.integer   "image_file_size"
+    t.string   "title"
+    t.integer  "created_by_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "front_page"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "shared"
   end
+
+  add_index "articles", ["shared"], :name => "index_articles_on_shared"
 
   create_table "contact_request_emails", :force => true do |t|
     t.string    "name"
@@ -61,13 +64,17 @@ ActiveRecord::Schema.define(:version => 20120318163343) do
   end
 
   create_table "events", :force => true do |t|
-    t.string    "name"
-    t.text      "details"
-    t.string    "location"
-    t.timestamp "start"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.text     "details"
+    t.string   "location"
+    t.datetime "start"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "shared"
+    t.datetime "shared_before"
   end
+
+  add_index "events", ["shared"], :name => "index_events_on_shared"
 
   create_table "forcasts", :force => true do |t|
     t.text      "raw_xml"
@@ -99,12 +106,13 @@ ActiveRecord::Schema.define(:version => 20120318163343) do
   add_index "sponsors", ["name"], :name => "index_sponsors_on_name"
 
   create_table "trail_conditions", :force => true do |t|
-    t.string    "trail_name"
-    t.string    "status"
-    t.text      "details"
-    t.integer   "updated_by_id"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "trail_name"
+    t.string   "status"
+    t.text     "details"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "shared"
   end
 
   create_table "twitter_feeds", :force => true do |t|
