@@ -37,7 +37,9 @@ class Forcast < ActiveRecord::Base
         winnipeg_xml = client.send(:get, winnipeg_url)
         url = client.send(:request_url, 2590)
         xml = client.send(:get, url)
-        new = Forcast.create!(:raw_xml => xml, :winnipeg => winnipeg_xml)
+        n = Forcast.create!(:raw_xml => xml, :winnipeg => winnipeg_xml)
+        self.connection.execute("delete from forcasts where id <> #{n.id}")
+        n
       rescue
         last
       end

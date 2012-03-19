@@ -1,15 +1,21 @@
 class TwitterFeed < ActiveRecord::Base
   
   def self.create_feed
-    self.create(:text => Tweet.new('lrsrclub').everything.map(&:attrs).to_json)
+    n = nil
+    begin
+      n = self.create(:text => Tweet.new('lrsrclub').everything.map(&:attrs).to_json)
+    rescue
+    end
+    self.connection.execute("delete from twitter_feeds where id <> #{n.id}") if n
+    n
   end
   
   def self.next_tweet
-    events_today = Event.all(:conditions => ["shared_before is NULL and start <= ? AND start >= ?", Time.now + 5.hours, Time.now.beginning_of_day])
-    events_today.first.update_attribute_without_timestamps(:shared_before, Time.now) if events_today.any?
-    new_articles = Article.all(:conditions => {:shared => nil}, :order => 'id asc')
-    new_events = Event.all(:conditions => {:shared => nil}, :order => 'id asc')
-    new_trail_conditions = TrailCondition.all(:conditions => {:shared => nil}, :order => 'id asc')        
+    events_today = Event.all(:conditions => ["shared_before is NULL and start <= ? AND start >= ? AND updated_at < ?", Time.now + 5.hours, Time.now.beginning_of_day, Time.now - 30.minutes])
+    events_today.first.update_attribute(:shared_before, Time.now) if events_today.any?
+    new_articles = Article.all(:conditions => ["shared is null and front_page = ? and updated_at < ?", true, Time.now - 30.minutes])
+    new_events = Event.all(:conditions => ["shared is null and updated_at < ?", Time.now - 30.minutes], :order => 'id asc')
+    new_trail_conditions = TrailCondition.all(:conditions => ["shared is null and user_updated_at < ?", Time.now - 1.minutes], :order => 'id asc')
     tweets = events_today + new_trail_conditions + new_articles + new_events
     tweets.first
   end  
