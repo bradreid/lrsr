@@ -15,8 +15,9 @@ class TwitterFeed < ActiveRecord::Base
     events_today.first.update_attribute(:shared_before, Time.now) if events_today.any?
     new_articles = Article.all(:conditions => ["shared is null and front_page = ? and updated_at < ?", true, Time.now - 30.minutes])
     new_events = Event.all(:conditions => ["shared is null and updated_at < ?", Time.now - 30.minutes], :order => 'id asc')
+    new_newsletters = Newsletter.all(:conditions => ["shared is null and updated_at < ?", Time.now - 30.minutes])
     new_trail_conditions = TrailCondition.all(:conditions => ["shared is null and user_updated_at < ?", Time.now - 1.minutes], :order => 'id asc')
-    tweets = events_today + new_trail_conditions + new_articles + new_events
+    tweets = events_today + new_trail_conditions + new_articles + new_events + new_newsletters
     tweets.first
   end  
   

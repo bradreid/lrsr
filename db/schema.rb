@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318234910) do
+ActiveRecord::Schema.define(:version => 20120319034515) do
 
   create_table "album_pictures", :force => true do |t|
     t.string    "title"
@@ -84,14 +84,17 @@ ActiveRecord::Schema.define(:version => 20120318234910) do
   end
 
   create_table "newsletters", :force => true do |t|
-    t.string    "name"
-    t.string    "newsletter_file_name"
-    t.string    "newsletter_content_type"
-    t.integer   "newsletter_file_size"
-    t.timestamp "newsletter_updated_at"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.string   "newsletter_file_name"
+    t.string   "newsletter_content_type"
+    t.integer  "newsletter_file_size"
+    t.datetime "newsletter_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "shared"
   end
+
+  add_index "newsletters", ["shared"], :name => "index_newsletters_on_shared"
 
   create_table "sponsors", :force => true do |t|
     t.string    "name"
