@@ -2,7 +2,7 @@ class AddSharedToNewsletters < ActiveRecord::Migration
   def self.up
     add_column :newsletters, :shared, :timestamp
     add_index :newsletters, :shared
-    Newsletter.update_all(:shared => true)
+    Newsletter.update_all(:shared => Time.now)
   end
 
   def self.down
