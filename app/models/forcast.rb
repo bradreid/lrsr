@@ -6,7 +6,7 @@ class Forcast < ActiveRecord::Base
   
   def valid?
     begin
-      self.forcast.forcast.condition
+      self.forcast.condition['temp']
       true
     rescue
       false
