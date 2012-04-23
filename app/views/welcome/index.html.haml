@@ -30,10 +30,10 @@
               =@weather.try(:created_at).strftime("%A, %B %d at %l:%M%p")   
           %td{:align => 'left'}
             .bold
-              - if @weather && @weather.forcast && @weather.forcast.condition
+              - if @weather && @weather.forcast && @weather.valid?
                 =@weather.forcast.condition['temp']
                 &deg;C
-          -if @weather && @weather.forcast && @weather.forcast.condition
+          -if @weather && @weather.forcast && @weather.valid?
             %tr
               %td
                 =@weather.sky_conditions
