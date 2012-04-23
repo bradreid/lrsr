@@ -4,6 +4,15 @@ class Forcast < ActiveRecord::Base
     @weather ||= Weatherman::Response.new(self.raw_xml)
   end
   
+  def valid?
+    begin
+      self.forcast.forcast.condition
+      true
+    rescue
+      false
+    end
+  end
+  
   def winnipeg_forcast
     @winnipeg ||= Weatherman::Response.new(self.winnipeg)    
   end
