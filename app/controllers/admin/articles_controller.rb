@@ -1,7 +1,9 @@
 class Admin::ArticlesController < AdminController
   
   def index
-    @articles = Article.order('id desc').page params[:page]
+    @articles = Article.order('id desc')
+    @articles = @articles.where(:front_page => true) if ('1' == params[:front_page_only]) || params[:commit].blank?
+    @articles = @articles.page params[:page]
   end
   
   def new

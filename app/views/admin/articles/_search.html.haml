@@ -1,0 +1,5 @@
+%br
+-form_for [:admin, Article.new], :builder => LrsrFormBuilder, :html => {:method => :get} do |f|
+  =label_tag 'front_page_only'
+  =check_box_tag 'front_page_only', '1', params['front_page_only'] || params['commit'].blank?
+  =f.submit 'filter'
