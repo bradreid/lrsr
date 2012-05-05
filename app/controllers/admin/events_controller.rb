@@ -1,10 +1,10 @@
 class Admin::EventsController < AdminController
   
   def index
-    if params['upcomming_events'] == '1'
-      @events = Event.order('start asc').where("start >= ?", Time.now.utc.to_s(:db)).page params[:page]      
+    if params['upcomming_events'] == '1' || params[:commit].blank?
+      @events = Event.order('start desc').where("start >= ?", Time.now.utc.to_s(:db)).page params[:page]      
     else
-      @events = Event.order('start asc').page params[:page]
+      @events = Event.order('start desc').page params[:page]
     end
   end
   
