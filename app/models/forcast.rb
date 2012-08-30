@@ -4,7 +4,7 @@ class Forcast < ActiveRecord::Base
     @weather ||= Weatherman::Response.new(self.raw_xml)
   end
   
-  def valid?
+  def valid?(arg=nil)
     begin
       self.forcast.condition['temp']
       true
