@@ -121,7 +121,7 @@ GEM
     warden (1.1.1)
       rack (>= 1.0)
     xml-simple (1.1.0)
-    yahoo_weatherman (1.1.3)
+    yahoo_weatherman (1.1.5)
       nokogiri
 
 PLATFORMS
@@ -141,4 +141,4 @@ DEPENDENCIES
   rmagick
   sqlite3
   twitter (> 2.0.0)
-  yahoo_weatherman
+  yahoo_weatherman (= 1.1.5)

@@ -4,7 +4,8 @@
 public url: 
 =text_field_tag :url, "http://www.lrsr.ca#{album_path(@album)}", :size => 30
 .upload{:style => 'float:right'}
-  -form_for [:admin, @album, @album.album_pictures.build], :html => { :multipart => true }, :builder => LrsrFormBuilder  do |f|
+  -form_for [:admin, @album, @picture || @album.album_pictures.build], :html => { :multipart => true }, :builder => LrsrFormBuilder  do |f|
+    =f.error_messages
     =f.file_field :image    
     =f.submit 'Add new picture'
 %h3 Pictures

@@ -3,7 +3,8 @@
 %table{:border => 0, :cellpadding => 0, :cellspacing => 0, :align => 'center', :width => '1024px'}
   %tr
     %td{:width => '680px', :valign => 'top'}
-      -@articles.each do |a|
+      - add_displayed = false
+      - @articles.each_with_index do |a, i|
         %table{:width => '100%'}
           %tr
             %td
@@ -13,6 +14,15 @@
               =image_tag(a.image(:medium), :style => 'float:right;padding:5px;padding-top:30px') if a.image_file_name
               =simple_format(a.try(:body))
               %br
+        -if (i % 3 == 2) && !add_displayed
+          - add_displayed = true
+          :javascript
+            google_ad_client = "ca-pub-8409006645899010";
+            google_ad_slot = "5868927659";
+            google_ad_width = 468;
+            google_ad_height = 60;
+          %br
+          %br
     %td{:width => '10px'}
     %td{:width => '268px', :valign => 'top'}
       LRSR Sponsor:
