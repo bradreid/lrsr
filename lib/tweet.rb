@@ -35,10 +35,10 @@ class Tweet
     a.map do |t|
       case t.class.name
         when "Twitter::Reply" then t.target_objects
-        when 'Twitter::Mention' then t.target_objects
-        when 'Twitter::Follow' then nil
-        when 'Twitter::Retweet' then t.target_objects
-        when 'Twitter::Favorite' then t.target_objects
+        when 'Twitter::Action::Mention' then t.target_objects
+        when 'Twitter::Action::Follow' then nil
+        when 'Twitter::Action::Retweet' then t.target_objects
+        when 'Twitter::Action::Favorite' then t.target_objects
         else raise t.class.name
       end
     end.compact.flatten
