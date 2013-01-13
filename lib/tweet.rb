@@ -38,7 +38,8 @@ class Tweet
         when 'Twitter::Mention' then t.target_objects
         when 'Twitter::Follow' then nil
         when 'Twitter::Retweet' then t.target_objects
-        else raise "test"
+        when 'Twitter::Favorite' then t.target_objects
+        else raise t.class.name
       end
     end.compact.flatten
   end
